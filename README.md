@@ -1,72 +1,43 @@
-# Bhavishya Silver Creation – Jewellery Website
+# Bhavishya Silver Creation – Luxury Jewellery Website
 
-A modern, fully responsive jewellery website for **Bhavishya Silver Creation**, a sub-brand of Manish Jewellers 21D. Built with HTML, CSS, and vanilla JavaScript—no frameworks required.
+A fully responsive, single‑page‑first website for **Bhavishya Silver Creation** with a luxury feel, smooth scroll animations, and dynamic product rendering. Built with HTML, Tailwind CSS, and vanilla JavaScript.
 
----
+## Features
 
-## 📸 Live Preview
+- **Integrated About section** on the homepage
+- **Larger, bolder navigation** with anchor links for seamless scrolling
+- **Animated on‑scroll** effects (AOS) for a premium experience
+- **Dynamic product & category rendering** from JavaScript data
+- **Filter & search** on the Products page
+- **Sticky header** with mobile hamburger menu
+- **Contact form** with validation
+- **WhatsApp integration** in social icons
+- **Fully responsive** (mobile‑first)
+- **Custom scrollbar** and extra luxury animations
 
-You can open `index.html` in any browser to see the site live. The design works seamlessly across all devices (desktop, tablet, and mobile).
-
----
-
-## ✨ Features
-
-- **Stunning Hero Section** with organic shapes and floating badges  
-- **Dynamic Categories & Products** rendered from JavaScript data  
-- **Filter & Search** on the Products page (by category / keyword)  
-- **Showcase Gallery** with smooth hover effects  
-- **Testimonials** carousel-like layout  
-- **Transparent Sticky Header** – becomes solid on scroll  
-- **Contact Form** with validation and submission feedback  
-- **WhatsApp Integration** – social icons link directly to chat  
-- **Back-to-Top Button** that appears after scrolling  
-- **Smooth Scroll Animations** via Intersection Observer  
-- **Fully Responsive** – mobile-first, no horizontal overflow  
-- **Google Fonts** – Poppins + Playfair Display for elegant typography  
-- **Font Awesome Icons** throughout
-
----
-
-## 🛠️ Tech Stack
-
-- **HTML5** – semantic markup  
-- **CSS3** – custom properties, grid, flexbox, animations  
-- **JavaScript (ES6)** – DOM manipulation, event handling, dynamic rendering  
-- **Google Fonts**  
-- **Font Awesome**
-
-No external libraries or build tools needed.
-
----
-
-## 📁 Project Structure
+## Folder Structure
 bhavishya-silver-creation/
-│
-├── index.html # Homepage
-├── products.html # All Products page (with filters & search)
-├── styles.css # Global styles (shared across all pages)
-├── script.js # All JavaScript (data, rendering, filters, interactions)
-│
-├── assets/ # All images, icons, and media files
-│ ├── logo.jpeg # Your brand logo
-│ ├── hero-bg.jpg # Hero section background image (optional)
-│ ├── hero-image.jpg # Image inside the organic hero shape
-│ │
-│ ├── products/ # Product images – keep organized
-│ │ ├── bracelet-1.jpg
-│ │ ├── earrings-1.jpg
-│ │ ├── ring-1.jpg
-│ │ └── necklace-1.jpg
-│ │
-│ └── icons/ # Custom icons or favicon
-│ └── favicon.ico
-│
-└── README.md # This file
+├── index.html
+├── about.html (redirects)
+├── contact.html
+├── products.html
+├── script.js
+├── styles.css
+├── assets/
+│ ├── logo.png
+│ ├── hero-image.jpg
+│ └── hero-background.jpg
+└── README.md
 
 
-📝 License
+## Quick Start
 
-Simply copy the content above into a file named `README.md` in your project root. It gives a professional overview and clear instructions for anyone who might work on the project in the future.
+1. Clone or download the repository.
+2. Place your own images in the `assets/` folder.
+3. Open `index.html` in any browser.
 
-Design and Develop by - Rajesh Kumar Sarkar (GitHub: rajesh36sarkar)
+No build tools or dependencies required.
+
+## Credits
+
+Design & Development by Rajesh Kumar Sarkar (GitHub: rajesh36sarkar)

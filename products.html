@@ -1,210 +1,52 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Products – Bhavishya Silver Creation</title>
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Google Fonts: Poppins & Playfair Display -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Shop All Products | Bhavishya Silver Creation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'n-green': '#11261d', 'n-cream': '#fbf7f0', 'n-card': '#f4ead6', 'n-gold': '#dcb36d', 'n-gold-hover': '#cba153', 'n-text': '#1e3329', 'n-muted': '#8c9c94', }, fontFamily: { heading: ['"Playfair Display"', 'serif'], body: ['Lato', 'sans-serif'], } } } }
+    </script>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- ===== TOP BAR ===== -->
-    <div class="top-bar">
-      <div class="container">
-        <div class="contact-info">
-          <span><i class="fas fa-phone-alt"></i> +91 9891001400</span>
-          <span><i class="fas fa-phone-alt"></i> +91 9540816060</span>
-          <span
-            ><i class="fas fa-map-marker-alt"></i> Shop No. 14, Sector 21D,
-            Faridabad</span
-          >
-        </div>
-        <div class="social-icons">
-          <a
-            href="https://www.instagram.com/manish_jewellers_21d_faridabad?igsh=dDlteGVxMTlqcWt4&utm_source=qr"
-            target="_blank"
-            aria-label="Instagram"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr"
-            target="_blank"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://wa.me/919540816060"
-            target="_blank"
-            aria-label="WhatsApp"
-          >
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+</head>
+<body class="bg-n-cream text-n-text font-body overflow-x-hidden antialiased flex flex-col min-h-screen">
 
-    <!-- ===== MAIN HEADER ===== -->
-    <header class="main-header">
-      <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="assets/logo-black.png"
-              alt="Bhavishya Silver Creation Logo"
-            />
-          </a>
-        </div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#collection">Collection</a></li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#blog">Blog</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="products.html" class="active nav-shop">Shop All</a></li>
-        </ul>
-        <div class="nav-icons">
-          <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-          </div>
-        </div>
-      </div>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <!-- ===== PRODUCTS PAGE ===== -->
-    <section class="products-page">
-      <div class="container">
-        <!-- Page Header with Filter & Search -->
-        <div class="products-page-header">
-          <h1 class="page-title">All Products</h1>
-          <div class="filter-bar">
-            <div id="categoryFilters" class="filter-chips">
-              <!-- Rendered by JS -->
+    <main class="flex-grow">
+        <section class="bg-n-green/5 py-12 border-b border-n-muted/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+                <h1 class="font-heading text-5xl text-n-green mb-4">Our Collection</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our curated selection of premium rings, necklaces, and earrings designed for brilliance.</p>
             </div>
-            <div class="search-box">
-              <i class="fas fa-search"></i>
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Search products..."
-              />
-            </div>
-            <button id="resetFilters" class="reset-btn">Reset</button>
-          </div>
-        </div>
+        </section>
 
-        <!-- Product Grid -->
-        <div class="products-grid" id="allProductsGrid">
-          <!-- Rendered by JS -->
-        </div>
-      </div>
-    </section>
+        <section class="py-12 bg-n-cream min-h-screen">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer" id="contact">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="logo-footer">
-              <img
-                src="assets/logo-white.png"
-                alt="Bhavishya Silver"
-                class="footer-logo-img"
-              />
-            </div>
-            <p style="margin: 10px 0 14px; max-width: 280px">
-              The Wholesale Destination for Premium Gold / Silver. Crafting
-              timeless jewellery with love and precision.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.instagram.com/manish_jewellers_21d_faridabad?igsh=dDlteGVxMTlqcWt4&utm_source=qr"
-                target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr"
-                target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                href="https://wa.me/919540816060"
-                target="_blank"
-                aria-label="WhatsApp"
-              >
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html#about">About</a></li>
-              <li><a href="index.html#collection">Collection</a></li>
-              <li><a href="products.html">Shop</a></li>
-              <li><a href="index.html#blog">Blog</a></li>
-              <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Special Offers</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">FAQs</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Subscribe Newsletter</h4>
-            <p style="margin-bottom: 10px; font-size: 0.85rem; color: #b8aba0">
-              Subscribe to the weekly newsletter for all the latest updates
-              &amp; get a 10% off bill offers.
-            </p>
-            <div class="newsletter">
-              <input type="email" placeholder="Your email address" />
-              <button class="btn">Subscribe</button>
-            </div>
-            <div class="payment-icons">
-              <i class="fab fa-cc-visa"></i>
-              <i class="fab fa-cc-mastercard"></i>
-              <i class="fab fa-cc-paypal"></i>
-              <i class="fas fa-credit-card"></i>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2026 Bhavishya Silver Creation. All Rights Reserved. Designed
-            with <span class="heart"><i class="fas fa-heart"></i></span> by
-            Oripio
-          </p>
-          <p style="margin-top: 4px; font-size: 0.7rem; color: #8a7a6a">
-            Shop No. 14, Sector 21D, Near Police Chowki, Faridabad, Haryana –
-            121012 &nbsp;|&nbsp;
-            <a href="tel:+919891001400">+91 9891001400</a> &nbsp;|&nbsp;
-            <a href="tel:+919540816060">+91 9540816060</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+                <div class="bg-white p-4 md:p-6 rounded-lg shadow-sm border border-n-muted/10 mb-10 flex flex-col md:flex-row justify-between items-center gap-6" data-aos="fade-up">
+                    <div id="categoryFilters" class="flex flex-wrap gap-2 justify-center"></div>
+                    <div class="flex w-full md:w-auto gap-4 items-center">
+                        <div class="relative w-full md:w-64">
+                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-n-muted"></i>
+                            <input type="text" id="searchInput" placeholder="Search jewellery..." class="w-full pl-10 pr-4 py-2 bg-n-cream border border-n-muted/30 rounded focus:outline-none focus:border-n-gold transition text-sm">
+                        </div>
+                        <button id="resetFilters" class="text-red-500 hover:text-red-700 text-sm font-semibold underline whitespace-nowrap">Reset</button>
+                    </div>
+                </div>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop"
-      ><i class="fas fa-chevron-up"></i
-    ></a>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="allProductsGrid"></div>
 
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

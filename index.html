@@ -1,603 +1,199 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bhavishya Silver Creation – Premium Gold & Silver Jewellery</title>
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Google Fonts: Poppins & Playfair Display -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Bhavishya Silver Creation | Premium Jewellery</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'n-green': '#11261d',
+                        'n-cream': '#fbf7f0',
+                        'n-card': '#f4ead6',
+                        'n-gold': '#dcb36d',
+                        'n-gold-hover': '#cba153',
+                        'n-text': '#1e3329',
+                        'n-muted': '#8c9c94',
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- ===== TOP BAR ===== -->
-    <div class="top-bar">
-      <div class="container">
-        <div class="contact-info">
-          <span><i class="fas fa-phone-alt"></i> +91 9891001400</span>
-          <span><i class="fas fa-phone-alt"></i> +91 9540816060</span>
-          <span
-            ><i class="fas fa-map-marker-alt"></i> Shop No. 14, Sector 21D,
-            Faridabad</span
-          >
-        </div>
-        <div class="social-icons">
-          <a
-            href="https://www.instagram.com/manish_jewellers_21d_faridabad?igsh=dDlteGVxMTlqcWt4&utm_source=qr"
-            target="_blank"
-            aria-label="Instagram"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr"
-            target="_blank"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://wa.me/919540816060"
-            target="_blank"
-            aria-label="WhatsApp"
-          >
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+</head>
+<body class="bg-n-cream text-n-text font-body overflow-x-hidden antialiased flex flex-col min-h-screen">
 
-    <!-- ===== MAIN HEADER ===== -->
-    <header class="main-header">
-      <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="assets/logo-black.png"
-              alt="Bhavishya Silver Creation Logo"
-            />
-          </a>
-        </div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#collection">Collection</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="products.html" class="nav-shop">All Products</a></li>
-        </ul>
-        <div class="nav-icons">
-          <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-          </div>
-        </div>
-      </div>
-    </header>
+    <!-- ===== HEADER (injected) ===== -->
+    <div id="header-placeholder"></div>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content animate-on-scroll">
-          <h6>Jewelry Design With Love</h6>
-          <h1>The Perfect <br /><span class="gold">Jewels For You</span></h1>
-          <p>
-            Welcoming in the spring season with an enchanting Emerald &amp;
-            Diamond necklace with earrings.
-          </p>
-          <div class="hero-buttons">
-            <a href="products.html" class="btn btn-primary">Buy Now</a>
-            <a href="#collection" class="btn">Explore</a>
-          </div>
-        </div>
-        <div class="hero-image animate-on-scroll">
-          <div class="hero-img-wrapper">
-            <div class="hero-img-shape">
-              <img src="assets/hero-image.jpg" alt="Jewelry Collection" />
-            </div>
-          </div>
-          <div class="floating-badge top">
-            <i class="fas fa-star"></i> 01/03
-          </div>
-          <div class="floating-badge bottom">
-            <i class="fas fa-gem"></i> Premium Collection
-          </div>
-        </div>
-      </div>
-    </section>
+    <main class="flex-grow">
 
-    <!-- ===== CATEGORIES (dynamic) ===== -->
-    <section class="categories" id="collection">
-      <div class="container">
-        <h2 class="section-title animate-on-scroll">Categories</h2>
-        <p class="section-subtitle animate-on-scroll">
-          Explore our exquisite collection
-        </p>
-        <div class="categories-grid" id="categoriesGrid">
-          <!-- Rendered by JS -->
-        </div>
-      </div>
-    </section>
+        <!-- ===== HERO ===== -->
+        <section class="bg-n-green text-white min-h-screen flex items-center relative overflow-hidden" id="home">
+            <!-- Ambient glows -->
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-n-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-n-gold/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
 
-    <!-- ===== FEATURED PRODUCTS (dynamic, 8–10 shown) ===== -->
-    <section class="products" id="shop">
-      <div class="container">
-        <h2 class="section-title animate-on-scroll">
-          Diamonds &amp; Engagement Ring
-        </h2>
-        <p class="section-subtitle animate-on-scroll">
-          Experience the beauty of diamond jewellery and find your perfect
-          piece.
-        </p>
-        <div class="products-grid" id="productsGrid">
-          <!-- Rendered by JS (8–10 products) -->
-        </div>
-        <div class="products-footer">
-          <a href="products.html" class="btn btn-primary"
-            >View All Products →</a
-          >
-        </div>
-      </div>
-    </section>
+            <!-- Floating ornaments -->
+            <div class="absolute top-20 left-10 text-n-gold/20 text-7xl floating-slow pointer-events-none"><i class="fas fa-gem"></i></div>
+            <div class="absolute bottom-32 right-20 text-n-gold/15 text-6xl floating-slow-delayed pointer-events-none"><i class="fas fa-crown"></i></div>
+            <div class="absolute top-1/3 right-10 text-n-gold/10 text-5xl floating-slow pointer-events-none"><i class="fas fa-ring"></i></div>
 
-    <!-- ===== SHOWCASE GALLERY ===== -->
-    <section class="gallery" id="gallery">
-      <div class="container">
-        <h2 class="section-title animate-on-scroll">Showcase Gallery</h2>
-        <p class="section-subtitle animate-on-scroll">
-          Discover our craftsmanship and elegance
-        </p>
-        <div class="gallery-grid">
-          <div class="gallery-item animate-on-scroll">
-            <img
-              src="https://via.placeholder.com/600x400?text=Gold+Jewelry+1"
-              alt="Gold Jewelry"
-            />
-          </div>
-          <div class="gallery-item animate-on-scroll">
-            <img
-              src="https://via.placeholder.com/600x400?text=Silver+Necklace"
-              alt="Silver Necklace"
-            />
-          </div>
-          <div class="gallery-item animate-on-scroll">
-            <img
-              src="https://via.placeholder.com/600x400?text=Diamond+Ring"
-              alt="Diamond Ring"
-            />
-          </div>
-          <div class="gallery-item animate-on-scroll">
-            <img
-              src="https://via.placeholder.com/600x400?text=Bracelet+Collection"
-              alt="Bracelet Collection"
-            />
-          </div>
-          <div class="gallery-item animate-on-scroll">
-            <img
-              src="https://via.placeholder.com/600x400?text=Earrings+Design"
-              alt="Earrings Design"
-            />
-          </div>
-          <div class="gallery-item animate-on-scroll">
-            <img
-              src="https://via.placeholder.com/600x400?text=Kundan+Set"
-              alt="Kundan Set"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-image animate-on-scroll">
-          <img
-            src="https://via.placeholder.com/500x500?text=Store+Image"
-            alt="Store"
-          />
-          <div class="brand-overlay">✦ BHAVISHYA SILVER</div>
-        </div>
-        <div class="about-content animate-on-scroll">
-          <div class="sub-brand">BHAVISHYA SILVER CREATION</div>
-          <h2>About <span class="gold">Us</span></h2>
-          <p class="highlight-text">
-            BHAVISHYA SILVER CREATION IS SUB BRAND OF MANISH JEWELLERS 21D
-          </p>
-          <p>
-            At Manish Jewellers 21D, we celebrate style, tradition, and
-            self-expression. Our carefully curated collection offers beautiful
-            jewellery that blends classic craftsmanship with modern trends
-            designed to be accessible and perfect for every occasion, from
-            everyday elegance to festive celebrations.
-          </p>
-          <p>
-            Each piece is crafted to make you feel confident, radiant, and
-            uniquely yourself. We believe jewellery is more than an accessory —
-            it's a statement, a vibe, and a reflection of who you are. Let us
-            help you wear it with pride.
-          </p>
-          <a href="#" class="btn btn-primary" style="margin-top: 8px"
-            >Know More</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="testimonials">
-      <div class="container">
-        <h2 class="section-title animate-on-scroll">What Our Clients Say</h2>
-        <p class="section-subtitle animate-on-scroll">
-          Trusted by jewellery lovers across India
-        </p>
-        <div class="testimonial-grid">
-          <div class="testimonial-card animate-on-scroll">
-            <div class="stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-            <p>
-              "Absolutely stunning collection! The diamond bracelet I ordered is
-              even more beautiful in person. Highly recommended."
-            </p>
-            <h4>Priya Sharma</h4>
-            <span>Delhi</span>
-          </div>
-          <div class="testimonial-card animate-on-scroll">
-            <div class="stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-            <p>
-              "Bhavishya Silver Creation truly understands elegance. The
-              craftsmanship and quality are unmatched. Will shop again!"
-            </p>
-            <h4>Rahul Verma</h4>
-            <span>Mumbai</span>
-          </div>
-          <div class="testimonial-card animate-on-scroll">
-            <div class="stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star-half-alt"></i>
-            </div>
-            <p>
-              "Got my wedding jewellery from here. The design was exactly what I
-              wanted. Thank you for making my day special!"
-            </p>
-            <h4>Anjali &amp; Vikram</h4>
-            <span>Faridabad</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== DIAMOND SECTION ===== -->
-    <section class="diamond-section">
-      <div class="container">
-        <div class="diamond-content animate-on-scroll">
-          <h2>
-            Get the best <span class="gold">diamonds</span> for your business
-          </h2>
-          <p>
-            Our expert team includes diamond setters, gemologists and jewellery
-            experts who will help you find the perfect stone for every occasion.
-          </p>
-          <a href="products.html" class="btn btn-primary"
-            >Check More Products</a
-          >
-        </div>
-        <div class="diamond-image animate-on-scroll">
-          <img
-            src="https://via.placeholder.com/400x400?text=Diamond+Showcase"
-            alt="Diamond"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== BLOG ===== -->
-    <section class="blog" id="blog">
-      <div class="container">
-        <h2 class="section-title animate-on-scroll">From Our Blog</h2>
-        <p class="section-subtitle animate-on-scroll">
-          Stories &amp; insights from the world of jewellery
-        </p>
-        <div class="blog-grid">
-          <div class="blog-card animate-on-scroll">
-            <div class="icon"><i class="fas fa-ring"></i></div>
-            <h4>New Rings</h4>
-            <p>
-              In mathematics, rings are algebraic structures that generalize
-              fields: multiplication need not be commutative and ...
-            </p>
-            <a href="#" class="read-more">Explore More →</a>
-          </div>
-          <div class="blog-card animate-on-scroll">
-            <div class="icon"><i class="fas fa-history"></i></div>
-            <h4>Crafting Jewellery Since 1888</h4>
-            <p>
-              As we all know, smaller gifts tend to be the best and there are
-              few things as exciting as a jewellery box-shaped presents.
-            </p>
-            <a href="#" class="read-more">Explore More →</a>
-          </div>
-          <div class="blog-card animate-on-scroll">
-            <div class="icon"><i class="fas fa-heart"></i></div>
-            <h4>Wedding Collection</h4>
-            <p>
-              In mathematics, rings are algebraic structures that generalize
-              fields: multiplication need not be commutative and ...
-            </p>
-            <a href="#" class="read-more">Explore More →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT PAGE ===== -->
-    <section class="contact-page" id="contact">
-      <div class="container">
-        <div class="contact-header animate-on-scroll">
-          <h2 class="section-title">Get In <span class="gold">Touch</span></h2>
-          <p class="section-subtitle">
-            We'd love to hear from you. Reach out for inquiries, custom orders,
-            or just to say hello.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <!-- Contact Form -->
-          <div class="contact-form-wrapper animate-on-scroll">
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <label for="contactName">Your Name</label>
-                <input
-                  type="text"
-                  id="contactName"
-                  placeholder="Enter your full name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="contactEmail">Email Address</label>
-                <input
-                  type="email"
-                  id="contactEmail"
-                  placeholder="Enter your email address"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="contactPhone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="contactPhone"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              <div class="form-group">
-                <label for="contactSubject">Subject</label>
-                <input
-                  type="text"
-                  id="contactSubject"
-                  placeholder="What's this about?"
-                />
-              </div>
-              <div class="form-group">
-                <label for="contactMessage">Your Message</label>
-                <textarea
-                  id="contactMessage"
-                  rows="5"
-                  placeholder="Tell us more about your inquiry..."
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">
-                Send Message
-              </button>
-            </form>
-          </div>
-
-          <!-- Contact Info & Map -->
-          <div class="contact-info-wrapper animate-on-scroll">
-            <div class="contact-details">
-              <h3>Visit Our Store</h3>
-              <div class="contact-detail-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <strong>Address</strong>
-                  <p>
-                    Shop No. 14, Sector 21D, Near Police Chowki, Faridabad,
-                    Haryana – 121012
-                  </p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-20">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <h6 class="text-n-muted tracking-[0.3em] text-sm mb-4 font-semibold uppercase animate-pulse-subtle">
+                        <i class="fas fa-sparkle mr-2 text-n-gold"></i> Jewelry Design With Love
+                    </h6>
+                    <h1 class="font-heading text-5xl lg:text-7xl xl:text-8xl leading-[1.1] mb-6 text-white">
+                        The Perfect <br /><span class="text-n-gold italic relative">
+                            Jewels
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-n-gold/30" viewBox="0 0 300 10">
+                                <path d="M0,5 Q75,0 150,5 Q225,10 300,5" stroke="currentColor" fill="none" stroke-width="2"/>
+                            </svg>
+                        </span> For You
+                    </h1>
+                    <p class="text-n-muted text-lg mb-10 max-w-md leading-relaxed">
+                        Welcoming in the spring season with an enchanting Emerald & Diamond necklace with earrings. Crafted for elegance.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#collection" class="bg-n-gold hover:bg-n-gold-hover text-n-green px-10 py-4 rounded text-sm font-bold uppercase tracking-wider transition duration-300 shadow-xl shadow-n-gold/30 hover:shadow-n-gold/50 hover:-translate-y-1">Explore Collection</a>
+                        <a href="#about" class="border border-n-gold text-n-gold hover:bg-n-gold hover:text-n-green px-10 py-4 rounded text-sm font-bold uppercase tracking-wider transition duration-300 hover:-translate-y-1">Our Story</a>
+                    </div>
                 </div>
-              </div>
-              <div class="contact-detail-item">
-                <i class="fas fa-phone-alt"></i>
-                <div>
-                  <strong>Phone</strong>
-                  <p><a href="tel:+919891001400">+91 9891001400</a></p>
-                  <p><a href="tel:+919540816060">+91 9540816060</a></p>
+                <div data-aos="fade-left" data-aos-duration="1200" class="relative group">
+                    <div class="absolute inset-0 border-2 border-n-gold rounded-lg transform translate-x-5 translate-y-5 transition duration-500 group-hover:translate-x-3 group-hover:translate-y-3 pointer-events-none"></div>
+                    <div class="absolute -inset-4 bg-n-gold/5 blur-2xl rounded-lg pointer-events-none"></div>
+                    <img src="assets/hero-image.jpg" alt="Emerald Necklace" loading="lazy" class="w-full h-[500px] lg:h-[600px] object-cover rounded-lg relative z-10 shadow-2xl" onerror="this.src='https://placehold.co/800x1000/152c24/dcb36d?text=Luxury+Jewellery'">
+                    <div class="absolute -bottom-6 -right-6 bg-n-gold text-n-green px-6 py-3 rounded-lg shadow-2xl z-20 flex items-center gap-3 animate-float">
+                        <i class="fas fa-star text-xl"></i>
+                        <span class="font-bold text-sm uppercase tracking-wider">100% Certified</span>
+                    </div>
                 </div>
-              </div>
-              <div class="contact-detail-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <strong>Email</strong>
-                  <p>
-                    <a href="mailto:info@bhavishyasilver.com"
-                      >info@bhavishyasilver.com</a
-                    >
-                  </p>
+            </div>
+        </section>
+
+        <!-- ===== CATEGORIES ===== -->
+        <section class="py-24 bg-n-cream" id="categories">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h6 class="text-n-gold tracking-[0.3em] text-sm mb-2 font-semibold uppercase">Shop by</h6>
+                    <h2 class="font-heading text-4xl md:text-5xl text-n-green mb-4">Our Categories</h2>
+                    <p class="text-n-muted max-w-xl mx-auto">Discover pieces crafted for your every moment.</p>
                 </div>
-              </div>
-              <div class="contact-detail-item">
-                <i class="fas fa-clock"></i>
-                <div>
-                  <strong>Working Hours</strong>
-                  <p>Mon – Sat: 10:00 AM – 8:00 PM</p>
-                  <p>Sunday: Closed</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="categoriesGrid"></div>
+            </div>
+        </section>
+
+        <!-- ===== COLLECTION (Featured Products) ===== -->
+        <section class="py-24 bg-n-cream border-t border-n-muted/10" id="collection">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                    <div>
+                        <h6 class="text-n-gold tracking-[0.3em] text-sm mb-2 font-semibold uppercase">Curated For You</h6>
+                        <h2 class="font-heading text-4xl md:text-5xl text-n-green leading-tight">Our <span class="text-n-gold italic">Collection</span></h2>
+                        <p class="text-n-muted mt-2 max-w-md">Timeless pieces, crafted with passion and precision.</p>
+                    </div>
+                    <a href="products.html" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-n-green hover:text-n-gold font-bold uppercase tracking-wider text-sm transition group">
+                        View All
+                        <i class="fas fa-arrow-right group-hover:translate-x-2 transition duration-300"></i>
+                    </a>
                 </div>
-              </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="collectionProductsGrid"></div>
             </div>
+        </section>
 
-            <!-- Social Links -->
-            <!-- <div class="contact-social">
-              <h3>Connect With Us</h3>
-              <div class="contact-social-icons">
-                <a
-                  href="https://www.instagram.com/manish_jewellers_21d_faridabad?igsh=dDlteGVxMTlqcWt4&utm_source=qr"
-                  target="_blank"
-                  class="social-icon instagram"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a
-                  href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr"
-                  target="_blank"
-                  class="social-icon facebook"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a
-                  href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw"
-                  target="_blank"
-                  class="social-icon location"
-                  ><i class="fas fa-map-pin"></i
-                ></a>
-                <a
-                  href="mailto:info@bhavishyasilver.com"
-                  class="social-icon email"
-                  ><i class="fas fa-envelope"></i
-                ></a>
-              </div>
-            </div> -->
+        <!-- ===== ABOUT (merged from about.html) ===== -->
+        <section class="py-24 bg-white border-y border-n-muted/10" id="about">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="relative group order-2 lg:order-1">
+                        <div class="absolute inset-0 border-2 border-n-gold rounded-lg transform -translate-x-5 -translate-y-5 transition duration-500 group-hover:-translate-x-3 group-hover:-translate-y-3 pointer-events-none"></div>
+                        <div class="absolute -inset-4 bg-n-gold/5 blur-2xl rounded-lg pointer-events-none"></div>
+                        <img src="assets/hero-background.jpg" loading="lazy" alt="Craftsmanship" class="w-full h-[500px] object-cover rounded-lg relative z-10 shadow-xl" onerror="this.src='https://placehold.co/800x900/f4ead6/11261d?text=Our+Legacy'">
+                        <div class="absolute -bottom-6 -left-6 bg-n-green text-white px-6 py-4 rounded-lg shadow-2xl z-20 flex items-center gap-4">
+                            <div class="text-center"><span class="block font-heading text-3xl text-n-gold">10+</span><span class="text-xs uppercase tracking-wider">Years</span></div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div class="text-center"><span class="block font-heading text-3xl text-n-gold">10k+</span><span class="text-xs uppercase tracking-wider">Clients</span></div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000" class="order-1 lg:order-2">
+                        <h6 class="text-n-gold tracking-[0.3em] text-sm mb-2 font-semibold uppercase">Our Heritage</h6>
+                        <h2 class="font-heading text-4xl lg:text-5xl text-n-green mb-6 leading-tight">
+                            A Legacy of <br /><span class="text-n-gold italic">Brilliance &amp; Trust</span>
+                        </h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                            Bhavishya Silver Creation was founded on a simple yet profound belief: that jewelry should not just be worn, but cherished for generations. We are a premier destination for wholesale and premium gold and silver, bringing unparalleled beauty to our clientele.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                            Our master artisans blend traditional techniques with contemporary designs, ensuring every diamond is perfectly set and every curve flawlessly polished. When you choose us, you are choosing a promise of purity, authenticity, and extraordinary craftsmanship.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 border-t border-n-gold/30 pt-8">
+                            <div><div class="flex items-center gap-3 text-n-green"><i class="fas fa-gem text-n-gold text-xl"></i><span class="font-bold text-sm uppercase tracking-wider">Certified Purity</span></div></div>
+                            <div><div class="flex items-center gap-3 text-n-green"><i class="fas fa-hammer text-n-gold text-xl"></i><span class="font-bold text-sm uppercase tracking-wider">Master Craftsmanship</span></div></div>
+                            <div><div class="flex items-center gap-3 text-n-green"><i class="fas fa-hand-holding-heart text-n-gold text-xl"></i><span class="font-bold text-sm uppercase tracking-wider">Bespoke Services</span></div></div>
+                            <div><div class="flex items-center gap-3 text-n-green"><i class="fas fa-shield-alt text-n-gold text-xl"></i><span class="font-bold text-sm uppercase tracking-wider">100% Authentic</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Google Maps -->
-            <div class="contact-map">
-              <h3>Find Us On Map</h3>
-              <div class="map-container">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.123456789012!2d77.12345678901234!3d28.45678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDI3JzI0LjQiTiA3N8KwMDcnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="280"
-                  style="border: 0; border-radius: 12px"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="Bhavishya Silver Creation Location"
-                >
-                </iframe>
-              </div>
+        <!-- ===== PERFECT DIAMOND CAROUSEL ===== -->
+        <section class="py-24 bg-n-green text-white relative overflow-hidden" id="diamonds">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-n-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-n-gold/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12" data-aos="fade-up">
+                    <div>
+                        <h6 class="text-n-muted tracking-[0.3em] text-sm mb-2 font-semibold uppercase">Discover</h6>
+                        <h2 class="font-heading text-4xl md:text-5xl">Find the perfect <br /><span class="text-n-gold italic">Diamond for you</span></h2>
+                    </div>
+                    <div class="flex gap-4 mt-6 md:mt-0">
+                        <button class="w-12 h-12 rounded-full bg-n-card/10 text-n-gold hover:bg-n-gold hover:text-n-green transition flex items-center justify-center text-xl shadow-lg hover:-translate-y-1 duration-300" id="diamondPrev"><i class="fas fa-arrow-left"></i></button>
+                        <button class="w-12 h-12 rounded-full bg-n-card/10 text-n-gold hover:bg-n-gold hover:text-n-green transition flex items-center justify-center text-xl shadow-lg hover:-translate-y-1 duration-300" id="diamondNext"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="perfectDiamondGrid"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer" id="contact">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="logo-footer">
-              <img
-                src="assets/logo-white.png"
-                alt="Bhavishya Silver"
-                class="footer-logo-img"
-              />
+        <!-- ===== CTA ===== -->
+        <section class="py-24 bg-n-cream text-center relative" id="cta">
+            <div class="absolute inset-0 bg-[url('https://placehold.co/1920x600/fbf7f0/dcb36d?text=+')] opacity-5 bg-cover bg-center"></div>
+            <div class="max-w-3xl mx-auto px-4 relative z-10" data-aos="zoom-in" data-aos-duration="800">
+                <div class="w-20 h-20 mx-auto bg-n-gold/10 rounded-full flex items-center justify-center text-n-gold text-3xl mb-6 animate-float">
+                    <i class="fas fa-sparkle"></i>
+                </div>
+                <h2 class="font-heading text-4xl md:text-5xl text-n-green mb-6">Experience the <span class="text-n-gold italic">Magic</span></h2>
+                <p class="text-n-muted text-lg mb-10 max-w-xl mx-auto">Step into the world of luxury. Browse our latest collections and find the perfect piece to elevate your everyday elegance.</p>
+                <a href="products.html" class="inline-block bg-n-gold hover:bg-n-gold-hover text-n-green px-12 py-5 rounded text-sm font-bold uppercase tracking-widest transition duration-300 shadow-2xl shadow-n-gold/30 hover:shadow-n-gold/50 hover:-translate-y-1">Explore Collection</a>
             </div>
-            <p style="margin: 10px 0 14px; max-width: 280px">
-              The Wholesale Destination for Premium Gold / Silver. Crafting
-              timeless jewellery with love and precision.
-            </p>
-            <div class="social-icons">
-              <a
-                href="https://www.instagram.com/manish_jewellers_21d_faridabad?igsh=dDlteGVxMTlqcWt4&utm_source=qr"
-                target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr"
-                target="_blank"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                href="https://wa.me/919540816060"
-                target="_blank"
-                aria-label="WhatsApp"
-              >
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#collection">Collection</a></li>
-              <li><a href="products.html">Shop</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Special Offers</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">FAQs</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Subscribe Newsletter</h4>
-            <p style="margin-bottom: 10px; font-size: 0.85rem; color: #b8aba0">
-              Subscribe to the weekly newsletter for all the latest updates
-              &amp; get a 10% off bill offers.
-            </p>
-            <div class="newsletter">
-              <input type="email" placeholder="Your email address" />
-              <button class="btn">Subscribe</button>
-            </div>
-            <div class="payment-icons">
-              <i class="fab fa-cc-visa"></i>
-              <i class="fab fa-cc-mastercard"></i>
-              <i class="fab fa-cc-paypal"></i>
-              <i class="fas fa-credit-card"></i>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2026 Bhavishya Silver Creation. All Rights Reserved. Designed
-            with <span class="heart"><i class="fas fa-heart"></i></span> by
-            Oripio
-          </p>
-          <p style="margin-top: 4px; font-size: 0.7rem; color: #8a7a6a">
-            Shop No. 14, Sector 21D, Near Police Chowki, Faridabad, Haryana –
-            121012 &nbsp;|&nbsp;
-            <a href="tel:+919891001400">+91 9891001400</a> &nbsp;|&nbsp;
-            <a href="tel:+919540816060">+91 9540816060</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+        </section>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop"
-      ><i class="fas fa-chevron-up"></i
-    ></a>
+    </main>
 
+    <!-- ===== FOOTER (injected) ===== -->
+    <div id="footer-placeholder"></div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main Script -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
