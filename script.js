@@ -1,295 +1,914 @@
-// ===========================
-// GLOBAL COMPONENTS (Header & Footer)
-// ===========================
-
-function loadGlobalComponents() {
-  const headerHTML = `
-    <header class="bg-n-green text-white sticky top-0 z-50 shadow-2xl">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <!-- Logo - bigger -->
-        <a href="index.html" class="flex items-center gap-3 group">
-          <img src="assets/logo.png" alt="Bhavishya Silver Creation" class="h-16 w-auto object-contain transform group-hover:scale-105 transition duration-300">
-        </a>
-        <!-- Desktop Nav - bigger font -->
-        <nav class="hidden md:flex space-x-10 text-base uppercase tracking-wider font-bold" id="desktop-nav">
-          <a href="index.html" class="nav-link transition duration-300" data-page="index.html">Home</a>
-          <a href="#about" class="nav-link transition duration-300" data-page="#about">About</a>
-          <a href="#collection" class="nav-link transition duration-300" data-page="#collection">Collection</a>
-          <a href="products.html" class="nav-link transition duration-300" data-page="products.html">Shop</a>
-          <a href="contact.html" class="nav-link transition duration-300" data-page="contact.html">Contact</a>
-        </nav>
-        <!-- Social Icons -->
-        <div class="hidden md:flex items-center space-x-6 text-xl">
-          <a href="#" class="hover:text-n-gold transition"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="hover:text-n-gold transition"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/919540816060" class="hover:text-n-gold transition"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <!-- Hamburger -->
-        <button id="hamburger" class="md:hidden text-3xl focus:outline-none hover:text-n-gold transition">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="md:hidden absolute top-full left-0 w-full bg-n-green border-t border-n-text/30 hidden flex-col px-4 py-6 space-y-4 text-center shadow-xl">
-        <a href="index.html" class="uppercase tracking-widest text-base font-bold nav-link" data-page="index.html">Home</a>
-        <a href="#about" class="uppercase tracking-widest text-base font-bold nav-link" data-page="#about">About</a>
-        <a href="#collection" class="uppercase tracking-widest text-base font-bold nav-link" data-page="#collection">Collection</a>
-        <a href="products.html" class="uppercase tracking-widest text-base font-bold nav-link" data-page="products.html">Shop</a>
-        <a href="contact.html" class="uppercase tracking-widest text-base font-bold nav-link" data-page="contact.html">Contact</a>
-        <div class="flex justify-center gap-6 pt-4 mt-2 border-t border-white/10 text-2xl">
-          <a href="#" class="hover:text-n-gold transition"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="hover:text-n-gold transition"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/919540816060" class="hover:text-n-gold transition"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-    </header>
-  `;
-
-  const footerHTML = `
-    <footer class="bg-n-green text-white pt-20 pb-10 border-t border-white/10 mt-auto">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div class="space-y-6">
-            <img src="assets/logo.png" alt="Bhavishya Silver Creation" class="h-16 w-auto object-contain">
-            <p class="text-n-muted text-sm leading-relaxed">The Wholesale Destination for Premium Gold & Silver. Crafting timeless jewellery with love and precision since inception.</p>
-            <div class="flex space-x-4">
-              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-n-gold hover:text-n-green transition"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-n-gold hover:text-n-green transition"><i class="fab fa-instagram"></i></a>
-              <a href="https://wa.me/919540816060" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-n-gold hover:text-n-green transition"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-          <div>
-            <h4 class="font-heading text-xl mb-6 text-n-gold">Quick Links</h4>
-            <ul class="space-y-3 text-sm text-n-muted">
-              <li><a href="index.html" class="hover:text-white transition">Home</a></li>
-              <li><a href="#about" class="hover:text-white transition">About Us</a></li>
-              <li><a href="#collection" class="hover:text-white transition">Collection</a></li>
-              <li><a href="products.html" class="hover:text-white transition">Shop All</a></li>
-              <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-heading text-xl mb-6 text-n-gold">Useful Links</h4>
-            <ul class="space-y-3 text-sm text-n-muted">
-              <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-              <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-              <li><a href="#" class="hover:text-white transition">Shipping & Returns</a></li>
-              <li><a href="#" class="hover:text-white transition">FAQs</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-heading text-xl mb-6 text-n-gold">Subscribe</h4>
-            <p class="text-sm text-n-muted mb-4">Get 10% off your first order and weekly exclusive updates.</p>
-            <form class="space-y-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
-              <input type="email" placeholder="Your Email Address" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded focus:outline-none focus:border-n-gold text-white text-sm transition">
-              <button type="submit" class="w-full bg-n-gold hover:bg-n-gold-hover text-n-green py-3 rounded text-sm font-bold uppercase tracking-wider transition">Subscribe</button>
-            </form>
-          </div>
-        </div>
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-sm text-n-muted">&copy; 2026 Bhavishya Silver Creation. All Rights Reserved.</p>
-          <div class="flex space-x-4 text-2xl text-n-muted">
-            <i class="fab fa-cc-visa hover:text-white transition cursor-pointer"></i>
-            <i class="fab fa-cc-mastercard hover:text-white transition cursor-pointer"></i>
-            <i class="fab fa-cc-paypal hover:text-white transition cursor-pointer"></i>
-          </div>
-        </div>
-      </div>
-    </footer>
-  `;
-
-  const headerPlaceholder = document.getElementById("header-placeholder");
-  const footerPlaceholder = document.getElementById("footer-placeholder");
-  if (headerPlaceholder) headerPlaceholder.innerHTML = headerHTML;
-  if (footerPlaceholder) footerPlaceholder.innerHTML = footerHTML;
-
-  // Active link highlighting (supports anchor links)
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const currentHash = window.location.hash || '';
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('text-n-gold', 'border-b-2', 'border-n-gold', 'pb-1');
-    link.classList.add('hover:text-n-gold', 'text-white');
-    const href = link.getAttribute('href');
-    // For anchor links, compare hash; for full pages compare path
-    if (href.startsWith('#')) {
-      if (href === currentHash) {
-        link.classList.add('text-n-gold', 'border-b-2', 'border-n-gold', 'pb-1');
-        link.classList.remove('hover:text-n-gold', 'text-white');
-      }
-    } else {
-      if (href === currentPath) {
-        link.classList.add('text-n-gold', 'border-b-2', 'border-n-gold', 'pb-1');
-        link.classList.remove('hover:text-n-gold', 'text-white');
-      }
-    }
-  });
-
-  // Hamburger toggle
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-      mobileMenu.classList.toggle("flex");
-    });
-  }
-}
-
-// ===========================
+// ════════════════════════════════════════════
 // DATA
-// ===========================
-const categories = [
-  { icon: "fa-gem", name: "Diamond", items: "24 items" },
-  { icon: "fa-ring", name: "Engagement", items: "18 items" },
-  { icon: "fa-crown", name: "Bridal", items: "12 items" },
-  { icon: "fa-star", name: "Special", items: "9 items" },
+// ════════════════════════════════════════════
+
+const categoriesData = [
+    {
+        name: "Gold Jewelry",
+        items: "8 items",
+        image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop&crop=center"
+    },
+    {
+        name: "Silver Jewelry",
+        items: "12 items",
+        image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop&crop=center"
+    },
+    {
+        name: "Rakhi Collection",
+        items: "6 items",
+        image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&h=400&fit=crop&crop=center"
+    },
+    {
+        name: "Coins & Bars",
+        items: "4 items",
+        image: "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=400&h=400&fit=crop&crop=center"
+    },
+    {
+        name: "Pendants",
+        items: "7 items",
+        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop&crop=center"
+    },
+    {
+        name: "Branded Jewelry",
+        items: "5 items",
+        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop&crop=center"
+    },
 ];
 
-const allProducts = [
-  { id: 1, name: "Emerald Halo Ring", category: "Ring", price: 2999, oldPrice: 3999, tag: "NEW", emoji: "💍", featured: true },
-  { id: 2, name: "Diamond Stud Earrings", category: "Earrings", price: 1899, oldPrice: 2499, tag: "HOT", emoji: "✨", featured: true },
-  { id: 3, name: "Solitaire Pendant", category: "Pendant", price: 1599, oldPrice: 2099, tag: "BEST", emoji: "💎", featured: false },
-  { id: 4, name: "Gold Chain Necklace", category: "Necklace", price: 2499, oldPrice: 3299, tag: "SALE", emoji: "📿", featured: false },
-  { id: 5, name: "Pearl Bracelet", category: "Bracelet", price: 999, oldPrice: null, tag: null, emoji: "🔮", featured: false },
-  { id: 6, name: "Sapphire Cocktail Ring", category: "Ring", price: 2199, oldPrice: 2799, tag: "NEW", emoji: "💍", featured: false },
-  { id: 7, name: "Diamond Tennis Bracelet", category: "Bracelet", price: 3999, oldPrice: 4999, tag: "LUXE", emoji: "✨", featured: true },
-  { id: 8, name: "Pearl Drop Earrings", category: "Earrings", price: 1299, oldPrice: null, tag: null, emoji: "🌸", featured: false },
+// ─── Complete Products Data from WhatsApp Images ───
+const allProductsData = [
+    // ===== SILVER JEWELRY =====
+    {
+        id: 1,
+        name: "Giya Giza Silver Ring",
+        category: "Silver Jewelry",
+        tag: "New",
+        description: "Exclusive 925 silver ring from the Giya Giza collection. Elegant and timeless.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.38 AM (1).jpeg",
+        featured: false,
+        rating: 4.3
+    },
+    {
+        id: 2,
+        name: "Silver Ring with Blue Stone",
+        category: "Silver Jewelry",
+        tag: "Premium",
+        description: "A silver ring with a blue stone in the center, presented in a white box with a clear lid. Labeled '40'.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.54 AM (1).jpeg",
+        featured: false,
+        rating: 4.7
+    },
+    {
+        id: 3,
+        name: "925 Silver Wild Elegance Ring",
+        category: "Silver Jewelry",
+        tag: "Bestseller",
+        description: "Let your style speak wild elegance. Luxury in 925 silver. Power. Pride. Pure silver.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.57 AM (2).jpeg",
+        featured: true,
+        rating: 4.9
+    },
+    {
+        id: 4,
+        name: "TRUE SILVER 925 Sterling Chain",
+        category: "Silver Jewelry",
+        tag: "Hot",
+        description: "TRUE SILVER 925 Sterling Silver. Premium quality and lasting shine.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.58 AM (1).jpeg",
+        featured: false,
+        rating: 4.5
+    },
+    {
+        id: 5,
+        name: "Bali Silver Earrings",
+        category: "Silver Jewelry",
+        tag: "Trending",
+        description: "Classic Bali-style silver earrings with intricate craftsmanship.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.14 AM.jpeg",
+        featured: false,
+        rating: 4.4
+    },
+
+    // ===== GOLD JEWELRY =====
+    {
+        id: 6,
+        name: "18KT Gold Elegance Ring",
+        category: "Gold Jewelry",
+        tag: "New",
+        description: "Shine in every curve of 18 KT elegance — simple, stylish, stunning.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.57 AM (1).jpeg",
+        featured: true,
+        rating: 4.8
+    },
+    {
+        id: 7,
+        name: "18KT Gold Fossil Ring",
+        category: "Gold Jewelry",
+        tag: "Premium",
+        description: "Crafted in pure 18KT gold ring fossil. A perfect keepsake for moments that matter.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.58 AM.jpeg",
+        featured: true,
+        rating: 4.9
+    },
+    {
+        id: 8,
+        name: "18KT Gold Redefined Ring",
+        category: "Gold Jewelry",
+        tag: "Bestseller",
+        description: "Elegance redefined in 18 KT gold. Trust is our tradition.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.59 AM (1).jpeg",
+        featured: false,
+        rating: 4.7
+    },
+    {
+        id: 9,
+        name: "14KT Gold Daily Wear Ring",
+        category: "Gold Jewelry",
+        tag: "Hot",
+        description: "Faith in style, crafted in 14 KT gold. Perfect for daily wear or special occasions.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.59 AM.jpeg",
+        featured: false,
+        rating: 4.5
+    },
+    {
+        id: 10,
+        name: "18KT Fossil Royal Crown Ring",
+        category: "Gold Jewelry",
+        tag: "Premium",
+        description: "A masterpiece designed for a regal lifestyle in 18kt FOSSIL. Time now wears a royal crown on your finger.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.01 AM.jpeg",
+        featured: true,
+        rating: 4.9
+    },
+
+    // ===== RAKHI COLLECTION =====
+    {
+        id: 11,
+        name: "Peppa Kids Rakhi",
+        category: "Rakhi Collection",
+        tag: "Kids",
+        description: "PEPPA KIDS RAKHI — Exclusive 925 Silver Rakhi. राखी भाई-बहन के रिश्ते की अटूट डोर।",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.38 AM.jpeg",
+        featured: true,
+        rating: 5.0
+    },
+    {
+        id: 12,
+        name: "Peppa Kids Rakhi (Variant)",
+        category: "Rakhi Collection",
+        tag: "Kids",
+        description: "PEPPA KIDS RAKHI — Exclusive 925 Silver Rakhi. राजी भाई-बहन के रिश्ते की अटूट ओर।",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.41 AM.jpeg",
+        featured: false,
+        rating: 4.9
+    },
+    {
+        id: 13,
+        name: "GIVYA Silver Rakhi",
+        category: "Rakhi Collection",
+        tag: "Premium",
+        description: "GIVYA 925 silver Rakhi with elegant design and superior finish.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.40 AM (1).jpeg",
+        featured: false,
+        rating: 4.7
+    },
+    {
+        id: 14,
+        name: "GIVEA Silver Rakhi",
+        category: "Rakhi Collection",
+        tag: "New",
+        description: "GIVEA 925 silver Rakhi, perfect for celebrating the bond of siblings.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.40 AM.jpeg",
+        featured: false,
+        rating: 4.6
+    },
+    {
+        id: 15,
+        name: "Sayma Exclusive Silver Rakhi",
+        category: "Rakhi Collection",
+        tag: "Bestseller",
+        description: "Exclusive 925 Silver Rakhi from Sayma. Premium quality and intricate design.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.57 AM.jpeg",
+        featured: true,
+        rating: 4.8
+    },
+    {
+        id: 16,
+        name: "GIYA Silver Rakhi",
+        category: "Rakhi Collection",
+        tag: "Premium",
+        description: "GIYA Rakhi in 925 Silver. ELLERY LIMITED — a symbol of love and tradition.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.54 AM.jpeg",
+        featured: false,
+        rating: 4.9
+    },
+
+    // ===== COINS & BARS =====
+    {
+        id: 17,
+        name: "MMTC-PAMP 24K Gold Bar 50g",
+        category: "Coins & Bars",
+        tag: "Premium",
+        description: "MMTC-PAMP Swiss Excellence. Made in India. 24K 999.9+ Purest Gold. LBMA GOOD DELIVERY REFINER.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.08 AM.jpeg",
+        featured: true,
+        rating: 5.0
+    },
+    {
+        id: 18,
+        name: "Manish Jewellers Gold Coin 64.4g",
+        category: "Coins & Bars",
+        tag: "Bestseller",
+        description: "MANISH JEWELLERS 21D — 64.400 Gm of pure gold. Trust Is Our Tradition.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.10 AM.jpeg",
+        featured: false,
+        rating: 4.7
+    },
+    {
+        id: 19,
+        name: "Manish Jewellers Gold Coin 50.77g",
+        category: "Coins & Bars",
+        tag: "New",
+        description: "MANISH JEWELLERS 21D — 50.770 Gm of premium gold. A symbol of wealth.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.31 AM.jpeg",
+        featured: false,
+        rating: 4.6
+    },
+
+    // ===== PENDANTS =====
+    {
+        id: 20,
+        name: "Silver-Plated Shankh Pendant",
+        category: "Pendants",
+        tag: "New",
+        description: "Invite positivity and peace with this finely detailed silver-plated shankh, a symbol of purity and sacred energy.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.03 AM (1).jpeg",
+        featured: true,
+        rating: 4.9
+    },
+    {
+        id: 21,
+        name: "Premium Silver Rashi Pendant",
+        category: "Pendants",
+        tag: "Premium",
+        description: "Premium Silver Rashi 999 — a sacred pendant for zodiac protection and style.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.03 AM (2).jpeg",
+        featured: true,
+        rating: 4.8
+    },
+    {
+        id: 22,
+        name: "Gemstone Pendant STONE 6691",
+        category: "Pendants",
+        tag: "Hot",
+        description: "STONE 6691 | MMT: 5.32D | GWT: 0.030 | BALL 188CT — a stunning gemstone pendant with intricate detailing.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.42.13 AM (1).jpeg",
+        featured: false,
+        rating: 4.7
+    },
+
+    // ===== BRANDED JEWELRY =====
+    {
+        id: 23,
+        name: "GIVA GIVATREE Pendant",
+        category: "Branded Jewelry",
+        tag: "Bestseller",
+        description: "GIVA GIVATREE — exclusive designer pendant crafted with 925 silver and modern aesthetics.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.42 AM.jpeg",
+        featured: true,
+        rating: 4.9
+    },
+    {
+        id: 24,
+        name: "GIYA Golden Silver Ring",
+        category: "Branded Jewelry",
+        tag: "Premium",
+        description: "GIYA GOLDEN — a luxurious silver ring with a golden finish, perfect for festive wear.",
+        image: "assets/products/WhatsApp Image 2026-06-25 at 10.41.51 AM.jpeg",
+        featured: false,
+        rating: 4.6
+    }
 ];
 
-// ===========================
-// Renderers
-// ===========================
-function renderCategoryCard(cat) {
-  return `
-    <div class="bg-n-card p-8 rounded-xl text-center transform hover:-translate-y-2 hover:shadow-xl transition duration-300 border border-transparent hover:border-n-gold group cursor-pointer" onclick="window.location.href='#collection'">
-      <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-n-gold text-2xl mb-4 group-hover:bg-n-gold group-hover:text-white transition duration-300 shadow-md">
-        <i class="fas ${cat.icon}"></i>
-      </div>
-      <span class="text-xs text-n-muted uppercase tracking-widest font-bold">${cat.items}</span>
-      <h3 class="font-heading text-2xl text-n-green mt-1 mb-4">${cat.name}</h3>
-      <span class="text-sm font-bold text-n-green group-hover:text-n-gold transition">Explore <i class="fas fa-arrow-right ml-1"></i></span>
-    </div>
-  `;
-}
+const spotlightData = [
+    { name: "18KT Fossil Royal Crown Ring", tag: "Premium", emoji: "💍" },
+    { name: "MMTC-PAMP 24K Gold Bar 50g", tag: "Bestseller", emoji: "🏅" },
+    { name: "Peppa Kids Rakhi", tag: "Top Rated", emoji: "🎀" },
+    { name: "Silver-Plated Shankh Pendant", tag: "New", emoji: "🐚" },
+];
 
-function renderProductCard(p) {
-  const tagHtml = p.tag ? `<span class="bg-white text-n-green text-[10px] font-bold px-2 py-1 rounded shadow uppercase tracking-wider">${p.tag}</span>` : "";
-  const oldPriceHtml = p.oldPrice ? `<span class="line-through text-n-muted text-sm ml-2">$${p.oldPrice}</span>` : "";
-  return `
-    <div class="bg-n-card rounded-xl p-5 flex flex-col relative transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 border border-transparent hover:border-n-gold group">
-      <div class="flex justify-between items-start mb-4 relative z-10">
-        <div>
-          <span class="text-[10px] text-n-muted uppercase tracking-widest font-bold">${p.category}</span>
-          <h3 class="font-heading text-xl text-n-green mt-1 leading-tight">${p.name}</h3>
-        </div>
-        <div class="flex flex-col gap-1 items-end">${tagHtml}</div>
-      </div>
-      <div class="flex-grow flex items-center justify-center py-8">
-        <span class="text-6xl group-hover:scale-110 transition duration-500 drop-shadow-md">${p.emoji}</span>
-      </div>
-      <div class="mt-auto pt-4 border-t border-n-gold/20">
-        <div class="mb-4">
-          <span class="font-bold text-xl text-n-green">$${p.price}</span>
-          ${oldPriceHtml}
-        </div>
-        <button onclick="alert('Added ${p.name} to cart!')" class="w-full bg-n-green hover:bg-black text-white py-3 rounded text-sm font-bold uppercase tracking-wider transition duration-300 flex justify-center items-center gap-2">
-          More Details
-        </button>
-      </div>
-    </div>
-  `;
-}
+const testimonialsData = [
+    {
+        name: "Pooja Parikh",
+        subtitle: "Darpana Meen Earrings (Set Of 2)",
+        quote: "They are great quality and such a unique piece of jewellery; they fit my small ears perfectly but also look good on my mom's ears that are slightly bigger than mine.",
+        stars: 5,
+    },
+    {
+        name: "Kirti Surana",
+        subtitle: "Basra Bride Earrings",
+        quote: "What a beautiful pair of earrings. Every bride must have it. It is so worth it. Very very happy. The packaging is luxurious. It doesn't tarnish. I have ordered two more other jewels from this brand.",
+        stars: 5,
+    },
+    {
+        name: "Mimi",
+        subtitle: "Basra Zainud Choker",
+        quote: "Very pretty and classy necklace. The design is elegant, you can style it beautifully with both traditional outfits and fusion wear.",
+        stars: 5,
+    },
+];
 
-// ===========================
-// Page Initialization
-// ===========================
+const collectionsData = [
+    "Gold Collection", "Silver Collection", "Rakhi Special",
+    "Coins & Bars", "Pendants", "Branded Jewelry",
+    "Daily Wear", "Festive Collection"
+];
 
-loadGlobalComponents();
+// ─── Instagram Reel Videos ───
+const reelUrls = [
+    'assets/videos/insta1.mp4',
+    'assets/videos/insta2.mp4',
+    'assets/videos/insta3.mp4',
+    'assets/videos/insta4.mp4',
+    'assets/videos/insta5.mp4',
+    'assets/videos/insta6.mp4',
+    'assets/videos/insta7.mp4',
+    'assets/videos/insta8.mp4',
+];
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Init AOS
-  AOS.init({
-    duration: 800,
-    easing: 'ease-out-cubic',
-    once: true,
-    offset: 50
-  });
+// ─── Instagram profile URL ───
+const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/manish_jewellers_21d_faridabad';
 
-  // Homepage: Categories
-  const catGrid = document.getElementById("categoriesGrid");
-  if (catGrid) catGrid.innerHTML = categories.map(renderCategoryCard).join("");
+// ─── WhatsApp Number (with country code for consistency) ───
+const WHATSAPP_NUMBER = '+919540816060';
 
-  // Homepage: Collection (show 4 products)
-  const collectionGrid = document.getElementById("collectionProductsGrid");
-  if (collectionGrid) collectionGrid.innerHTML = allProducts.slice(0, 4).map(renderProductCard).join("");
+// ─── Flag to prevent re-render loops ───
+let lastDeviceType = '';
 
-  // Homepage: Diamond carousel (show 4 products)
-  const diamondGrid = document.getElementById("perfectDiamondGrid");
-  if (diamondGrid) diamondGrid.innerHTML = allProducts.slice(0, 4).map(renderProductCard).join("");
+// ════════════════════════════════════════════
+// RENDER HELPERS
+// ════════════════════════════════════════════
 
-  // Products page logic (if on products.html)
-  const allProductsGrid = document.getElementById("allProductsGrid");
-  if (allProductsGrid) {
-    let currentFilter = "All";
-    const filterContainer = document.getElementById("categoryFilters");
-    const searchInput = document.getElementById("searchInput");
-    const resetBtn = document.getElementById("resetFilters");
-
-    const renderShop = (data) => {
-      if (data.length === 0) {
-        allProductsGrid.innerHTML = `<div class="col-span-full py-12 text-center text-n-muted">No products found.</div>`;
-      } else {
-        allProductsGrid.innerHTML = data.map(renderProductCard).join("");
-      }
-    };
-
-    if (filterContainer) {
-      const cats = ["All", ...new Set(allProducts.map(p => p.category))];
-      filterContainer.innerHTML = cats.map(cat =>
-        `<button class="filter-chip px-5 py-2 rounded-full border border-n-green text-sm font-semibold transition ${cat === 'All' ? 'bg-n-green text-white' : 'bg-transparent text-n-green hover:bg-n-green hover:text-white'}" data-cat="${cat}">${cat}</button>`
-      ).join("");
-
-      filterContainer.addEventListener("click", (e) => {
-        if (e.target.tagName === 'BUTTON') {
-          document.querySelectorAll(".filter-chip").forEach(btn => {
-            btn.classList.remove('bg-n-green', 'text-white');
-            btn.classList.add('bg-transparent', 'text-n-green');
-          });
-          e.target.classList.remove('bg-transparent', 'text-n-green');
-          e.target.classList.add('bg-n-green', 'text-white');
-          currentFilter = e.target.dataset.cat;
-          applyFilters();
+function renderStars(count) {
+    let html = "";
+    const fullStars = Math.floor(count);
+    const halfStar = count % 1 >= 0.5;
+    for (let i = 0; i < 5; i++) {
+        if (i < fullStars) {
+            html += '<i class="fas fa-star"></i>';
+        } else if (i === fullStars && halfStar) {
+            html += '<i class="fas fa-star-half-alt"></i>';
+        } else {
+            html += '<i class="far fa-star" style="color:rgba(255,255,255,0.3);"></i>';
         }
-      });
     }
+    return html;
+}
 
-    const applyFilters = () => {
-      const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
-      const filtered = allProducts.filter(p => {
-        const matchesCat = currentFilter === "All" || p.category === currentFilter;
-        const matchesSearch = p.name.toLowerCase().includes(searchTerm);
-        return matchesCat && matchesSearch;
-      });
-      renderShop(filtered);
+function renderStarsPlain(count) {
+    let html = "";
+    for (let i = 0; i < 5; i++) {
+        html += i < Math.round(count) ? "★" : '<span class="text-[#ddd]">☆</span>';
+    }
+    return html;
+}
+
+function getTagClass(tag) {
+    if (!tag) return "";
+    const map = { 
+        new: "new", 
+        hot: "hot", 
+        sale: "sale", 
+        premium: "premium", 
+        bestseller: "bestseller", 
+        trending: "trending"
     };
+    return map[tag.toLowerCase()] || "";
+}
 
-    if (searchInput) searchInput.addEventListener("input", applyFilters);
-    if (resetBtn) {
-      resetBtn.addEventListener("click", () => {
-        if (searchInput) searchInput.value = "";
-        document.querySelector('.filter-chip[data-cat="All"]')?.click();
-      });
+// ─── E-COMMERCE PRODUCT CARD (View → WhatsApp) ───
+function renderProductCardEcom(p) {
+    const tagClass = getTagClass(p.tag);
+    const tagDisplay = p.tag || "";
+    const rating = p.rating || 0;
+    // Encode product name for WhatsApp message
+    const waMessage = encodeURIComponent(`I'm interested in ${p.name} from Bhavishya Silver Creation`);
+    return `
+        <div class="product-card-ecom">
+            <div class="product-image-wrap">
+                <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/400x400/fbf7f0/dcb36d?text=${encodeURIComponent(p.name.substring(0, 20))}'">
+                ${tagDisplay ? `<span class="product-badge ${tagClass}">${tagDisplay}</span>` : ''}
+                <div class="product-rating">
+                    <i class="fas fa-star"></i> ${rating}
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">${p.name}</div>
+                <div class="product-category">${p.category}</div>
+                <button class="view-btn" onclick="window.open('https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}', '_blank')">
+                    <i class="fas fa-eye"></i> View
+                </button>
+            </div>
+        </div>
+    `;
+}
+
+// ─── Category Card ───
+function renderCategoryCard(cat) {
+    return `
+        <div class="category-card" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+            <div class="category-image-wrap">
+                <img src="${cat.image}" alt="${cat.name}" loading="lazy" class="w-full aspect-square object-cover rounded-full" onerror="this.src='https://placehold.co/200x200/fbf7f0/dcb36d?text=${encodeURIComponent(cat.name)}'">
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-brand-muted mt-3 block">${cat.items}</span>
+            <h3 class="font-heading text-2xl text-brand-dark mt-1 mb-3">${cat.name}</h3>
+            <span class="text-sm font-bold text-brand-dark hover:text-brand-gold transition">Explore <i class="fas fa-arrow-right ml-1"></i></span>
+        </div>
+    `;
+}
+
+function renderSpotlightItem(item) {
+    return `
+        <div class="spotlight-item">
+            <div class="sp-img"><i class="fas fa-gem"></i></div>
+            <h4 class="text-sm font-medium text-brand-dark mt-1.5 leading-tight">${item.name}</h4>
+            <span class="text-brand-muted text-xs font-normal">${item.tag}</span>
+        </div>
+    `;
+}
+
+function renderTestimonial(t) {
+    return `
+        <div class="testimonial-card">
+            <div class="text-brand-gold text-sm mb-2">${renderStarsPlain(t.stars)}</div>
+            <div class="font-bold text-brand-dark text-base">${t.name}</div>
+            <div class="text-brand-muted text-sm mb-2">${t.subtitle}</div>
+            <p class="text-gray-600 text-sm leading-relaxed italic">${t.quote}</p>
+        </div>
+    `;
+}
+
+
+// ════════════════════════════════════════════
+// REELS RENDERER — with Play/Pause button on mobile
+// ════════════════════════════════════════════
+
+function renderReels() {
+    const grid = document.getElementById('reelsGrid');
+    if (!grid) return;
+
+    const isMobile = window.innerWidth < 768;
+
+    // Avoid unnecessary re-renders if device type hasn't changed
+    const currentDevice = isMobile ? 'mobile' : 'desktop';
+    if (lastDeviceType === currentDevice && grid.children.length > 0) {
+        // If already rendered and device type same, skip re-render
+        return;
     }
-    renderShop(allProducts);
-  }
+    lastDeviceType = currentDevice;
 
-  // Contact form
-  const contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("Message sent successfully! We will contact you soon.");
-      contactForm.reset();
+    grid.innerHTML = reelUrls.map((url, index) => `
+        <div class="reel-item" data-index="${index}">
+            <div class="reel-placeholder">
+                <i class="fab fa-instagram"></i>
+                <span>Reel ${index + 1}</span>
+                <span>${isMobile ? 'Tap to play' : 'Hover to play'}</span>
+            </div>
+            <video 
+                src="${url}"
+                muted
+                playsinline
+                preload="metadata"
+                loading="lazy"
+            ></video>
+            ${isMobile ? `
+                <button class="reel-play-btn" aria-label="Play/Pause video">
+                    <i class="fas fa-play"></i>
+                </button>
+            ` : ''}
+            <a href="${INSTAGRAM_PROFILE_URL}" target="_blank" class="reel-link-overlay" aria-label="View on Instagram"></a>
+        </div>
+    `).join('');
+
+    const reelItems = document.querySelectorAll('.reel-item');
+    reelItems.forEach((item) => {
+        const video = item.querySelector('video');
+        const placeholder = item.querySelector('.reel-placeholder');
+        const playBtn = item.querySelector('.reel-play-btn');
+        if (!video) return;
+
+        video.style.opacity = '0';
+
+        video.addEventListener('loadedmetadata', function() {
+            video.style.opacity = '1';
+        });
+
+        video.addEventListener('error', function() {
+            video.style.opacity = '1';
+            if (placeholder) {
+                placeholder.innerHTML = `
+                    <i class="fas fa-exclamation-triangle" style="color:#e74c3c;"></i>
+                    <span>Video unavailable</span>
+                `;
+            }
+        });
+
+        if (isMobile) {
+            // Mobile: Play/Pause button toggle
+            if (playBtn) {
+                playBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (video.paused) {
+                        video.play().catch(function(e) {
+                            // If play fails, show a message or retry
+                            console.warn('Video play failed:', e);
+                        });
+                        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                        if (placeholder) placeholder.style.opacity = '0';
+                        item.classList.add('loaded');
+                    } else {
+                        video.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
+                });
+            }
+
+            // Click on video area to toggle (but not on the Instagram overlay)
+            item.addEventListener('click', function(e) {
+                if (e.target.closest('.reel-link-overlay')) return;
+                if (playBtn) {
+                    playBtn.click();
+                }
+            });
+
+            video.addEventListener('ended', function() {
+                if (playBtn) {
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+
+        } else {
+            // Desktop: Hover play/pause
+            item.addEventListener('mouseenter', function() {
+                video.style.opacity = '1';
+                if (placeholder) placeholder.style.opacity = '0';
+                item.classList.add('loaded');
+                video.play().catch(function(e) {
+                    console.warn('Video play failed:', e);
+                });
+            });
+
+            item.addEventListener('mouseleave', function() {
+                if (!video.paused) {
+                    video.pause();
+                }
+            });
+        }
+
+        // Instagram overlay: pause video
+        const overlay = item.querySelector('.reel-link-overlay');
+        if (overlay) {
+            overlay.addEventListener('click', function(e) {
+                if (!video.paused) {
+                    video.pause();
+                }
+                if (isMobile && playBtn) {
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+        }
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden && !video.paused) {
+                video.pause();
+                if (isMobile && playBtn) {
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            }
+        });
     });
-  }
+}
+
+
+// ════════════════════════════════════════════
+// HERO VIDEO — AUTOPLAY (muted for mobile)
+// ════════════════════════════════════════════
+
+function initHeroVideo() {
+    const heroVideo = document.getElementById('heroVideo');
+    if (!heroVideo) return;
+
+    // Ensure video is muted for autoplay on mobile
+    heroVideo.muted = true;
+
+    heroVideo.play().catch(function(error) {
+        console.log('Autoplay blocked. Click to play.');
+        const wrapper = document.getElementById('heroVideoWrapper');
+        if (wrapper) {
+            wrapper.addEventListener('click', function() {
+                heroVideo.play().catch(function(e) {
+                    console.warn('Play failed:', e);
+                });
+            });
+        }
+    });
+
+    heroVideo.addEventListener('ended', function() {
+        heroVideo.currentTime = 0;
+        heroVideo.play().catch(function() {});
+    });
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden && !heroVideo.paused) {
+            heroVideo.pause();
+        } else if (!document.hidden && heroVideo.paused) {
+            heroVideo.play().catch(function() {});
+        }
+    });
+}
+
+
+// ════════════════════════════════════════════
+// DOM READY
+// ════════════════════════════════════════════
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    // ── Init AOS with fallback ──
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 40,
+        });
+    } else {
+        // Fallback: manually add animation classes
+        document.querySelectorAll('[data-aos]').forEach(el => {
+            el.classList.add('animate-fade-up');
+        });
+    }
+
+    // ── Hero Video ──
+    initHeroVideo();
+
+    // ── Categories ──
+    const catGrid = document.getElementById("categoriesGrid");
+    if (catGrid) catGrid.innerHTML = categoriesData.map(renderCategoryCard).join("");
+
+    // ── Collection (featured products) ──
+    const featured = allProductsData.filter(p => p.featured);
+    const collGrid = document.getElementById("collectionProductsGrid");
+    if (collGrid) {
+        collGrid.innerHTML = featured.map(renderProductCardEcom).join("");
+    }
+
+    // ── Spotlight ──
+    const spGrid = document.getElementById("perfectDiamondGrid");
+    if (spGrid) spGrid.innerHTML = spotlightData.map(renderSpotlightItem).join("");
+
+    // ── Testimonials ──
+    const tGrid = document.getElementById("testimonialsGrid");
+    if (tGrid) tGrid.innerHTML = testimonialsData.map(renderTestimonial).join("");
+
+    // ── Collections ──
+    const colGrid = document.getElementById("collectionGrid");
+    if (colGrid) {
+        const collectionIcons = ['💎', '✨', '🌟', '💫', '👑', '🎀', '👜', '🔮'];
+        colGrid.innerHTML = collectionsData.map((name, index) => `
+            <div class="collection-item" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+                <span class="collection-icon">${collectionIcons[index % collectionIcons.length]}</span>
+                ${name}
+            </div>
+        `).join("");
+    }
+
+    // ── Reels ──
+    renderReels();
+
+    // ── PRODUCTS - All Products Grid ──
+    const allGrid = document.getElementById("allProductsGrid");
+    if (allGrid) {
+        allGrid.innerHTML = allProductsData.map(renderProductCardEcom).join("");
+        const countEl = document.getElementById("productCount");
+        if (countEl) {
+            countEl.textContent = `${allProductsData.length} products`;
+        }
+    }
+
+    // ── Offer Filter Chips (by category) ──
+    const uniqueCategories = ['All', ...new Set(allProductsData.map(p => p.category))];
+    const filterContainer = document.getElementById('offerFilters');
+    if (filterContainer) {
+        filterContainer.innerHTML = uniqueCategories.map(cat =>
+            `<button class="offer-chip ${cat === 'All' ? 'active' : ''}" data-cat="${cat}">${cat}</button>`
+        ).join('');
+    }
+
+    const offerChips = document.querySelectorAll('.offer-chip');
+    offerChips.forEach(chip => {
+        chip.addEventListener('click', function() {
+            offerChips.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.dataset.cat;
+            const grid = document.getElementById("allProductsGrid");
+            if (!grid) return;
+            
+            let filtered = allProductsData;
+            if (filter !== 'All') {
+                filtered = allProductsData.filter(p => p.category === filter);
+            }
+            
+            grid.innerHTML = filtered.map(renderProductCardEcom).join("");
+            
+            const countEl = document.getElementById("productCount");
+            if (countEl) {
+                countEl.textContent = `${filtered.length} products`;
+            }
+        });
+    });
+
+    // ── Contact Form ──
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const name = document.getElementById("contactName").value.trim();
+            const email = document.getElementById("contactEmail").value.trim();
+            const message = document.getElementById("contactMessage").value.trim();
+            
+            // Validation
+            if (!name || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+            
+            const waText = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+            window.open(waUrl, '_blank');
+            // Optionally reset the form after a moment
+            setTimeout(() => contactForm.reset(), 500);
+        });
+    }
+
+    // ── Subscribe Form (consistent event binding) ──
+    const subscribeForm = document.getElementById("subscribeForm");
+    if (subscribeForm) {
+        subscribeForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const input = this.querySelector('input[type="email"]');
+            if (input && input.value.trim()) {
+                alert("Subscribed! You'll receive updates shortly.");
+                this.reset();
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+    }
+
+    // ── Compact Hamburger Menu ──
+    const hamburger = document.getElementById("hamburgerBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const overlay = document.getElementById("mobileOverlay");
+
+    function toggleMenu() {
+        const isOpen = mobileMenu.classList.contains('open');
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+
+    function openMenu() {
+        mobileMenu.classList.add('open');
+        overlay.classList.remove('hidden');
+        // Use requestAnimationFrame to avoid flicker
+        requestAnimationFrame(() => {
+            overlay.classList.add('open');
+        });
+        hamburger.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove('open');
+        overlay.classList.remove('open');
+        hamburger.classList.remove('active');
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 400);
+    }
+
+    if (hamburger && mobileMenu && overlay) {
+        hamburger.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+
+    // ── Populate mobile categories ──
+    const mobileCats = document.getElementById("mobileCategoriesCompact");
+    if (mobileCats) {
+        const catNames = categoriesData.map(c => c.name);
+        mobileCats.innerHTML = catNames.map(name =>
+            `<a href="#products" class="mobile-cat-chip">${name}</a>`
+        ).join("");
+    }
+
+    // ── Header scroll effect ──
+    const header = document.getElementById("mainHeader");
+    window.addEventListener("scroll", function() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > 30) {
+            header.classList.add("header-scrolled");
+        } else {
+            header.classList.remove("header-scrolled");
+        }
+    });
+
+    // ── Nav active state on scroll ──
+    const sections = ["home", "about", "collection", "products", "instagram-shorts", "contact"];
+    const navLinks = document.querySelectorAll(".mobile-nav-compact");
+
+    window.addEventListener("scroll", function() {
+        let current = "";
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                const top = el.offsetTop - 120;
+                const bottom = top + el.offsetHeight;
+                const scroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (scroll >= top && scroll < bottom) current = id;
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+
+    // ── Diamond Carousel ──
+    const prevBtn = document.getElementById("diamondPrev");
+    const nextBtn = document.getElementById("diamondNext");
+    const diamondGrid = document.getElementById("perfectDiamondGrid");
+
+    if (prevBtn && nextBtn && diamondGrid) {
+        let currentIndex = 0;
+
+        const updateCarousel = () => {
+            const rotated = [];
+            for (let i = 0; i < spotlightData.length; i++) {
+                rotated.push(spotlightData[(currentIndex + i) % spotlightData.length]);
+            }
+            diamondGrid.innerHTML = rotated.map(renderSpotlightItem).join("");
+        };
+
+        prevBtn.addEventListener("click", function() {
+            currentIndex = (currentIndex - 1 + spotlightData.length) % spotlightData.length;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener("click", function() {
+            currentIndex = (currentIndex + 1) % spotlightData.length;
+            updateCarousel();
+        });
+    }
+
+    // ── Logo fallback (for multiple logo variants) ──
+    document.querySelectorAll('img[src^="assets/logo"]').forEach(img => {
+        img.addEventListener("error", function() {
+            this.style.display = "none";
+            const parent = this.parentElement;
+            if (parent && !parent.querySelector('.logo-fallback')) {
+                const fallback = document.createElement("span");
+                fallback.className = "font-heading text-2xl font-bold text-brand-dark logo-fallback";
+                fallback.textContent = "Bhavishya Silver";
+                parent.appendChild(fallback);
+            }
+        });
+    });
+
+    // ── Re-render reels on resize (only when device type changes) ──
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            renderReels();
+        }, 300);
+    });
+
 });
