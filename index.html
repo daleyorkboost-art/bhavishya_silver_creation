@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Bhavishya Silver Creation | Premium Gold &amp; Silver</title>
+    <title>Manish Jewellers | A Legacy of Elegance — MMTC PAMP Authorised</title>
 
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -12,7 +12,9 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
     <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
 
@@ -21,13 +23,13 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#11261d',
+                        'brand-dark': '#0a1410',
                         'brand-cream': '#fbf7f0',
                         'brand-card': '#f4ead6',
                         'brand-gold': '#dcb36d',
                         'brand-gold-hover': '#cba153',
                         'brand-text': '#1e3329',
-                        'brand-muted': '#8c9c94',
+                        'brand-muted': '#7a8c84',
                         'brand-white': '#ffffff',
                         'brand-light': '#faf8f5',
                     },
@@ -40,27 +42,24 @@
         }
     </script>
 </head>
-<body>
+<body class="bg-brand-light text-brand-text antialiased">
 
     <!-- ════════════════════════════════════════════ -->
-    <!-- HEADER - Transparent with white text, scrolls to black -->
+    <!-- HEADER -->
     <!-- ════════════════════════════════════════════ -->
-    <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+    <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20 md:h-24">
-                <!-- LEFT: Hamburger -->
                 <button id="hamburgerBtn" class="hamburger-btn-compact" aria-label="Toggle Menu">
                     <span class="hamburger-line-compact"></span>
                     <span class="hamburger-line-compact"></span>
                     <span class="hamburger-line-compact"></span>
                 </button>
 
-                <!-- CENTER: Logo -->
-                <a href="#home" class="flex items-center gap-2 group shrink-0 absolute left-1/2 -translate-x-1/2">
-                    <img src="assets/logo-main.png" alt="Bhavishya Silver Creation" class="h-10 md:h-12 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <a href="#home" class="flex mr-12 items-center gap-2 group shrink-0 absolute left-1/2 -translate-x-1/2">
+                    <img src="assets/logo-image.png" alt="Manish Jewellers" class="h-14 md:h-20 xl:h-24 w-auto object-contain transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                 </a>
 
-                <!-- RIGHT: Social Icons (larger) -->
                 <div class="flex items-center gap-3 md:gap-4 shrink-0">
                     <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon-header" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon-header" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -69,42 +68,34 @@
             </div>
         </div>
 
-        <!-- ═══ COMPACT DROPDOWN MENU ═══ -->
-        <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white shadow-xl transform -translate-y-[200%] transition-transform duration-400 ease-in-out z-40 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 py-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Nav Links -->
+        <!-- DROPDOWN MENU -->
+        <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white/98 backdrop-blur-xl shadow-2xl transform -translate-y-[200%] transition-transform duration-600 ease-in-out z-40 overflow-hidden border-b border-brand-gold/20">
+            <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="col-span-2 md:col-span-1">
-                    <div class="text-xs font-bold text-brand-muted uppercase tracking-wider mb-2">Menu</div>
-                    <nav class="flex flex-col space-y-1">
-                        <a href="#home" class="mobile-nav-compact active">Home</a>
-                        <a href="#collection" class="mobile-nav-compact">Collection</a>
-                        <a href="#products" class="mobile-nav-compact">Shop</a>
-                        <a href="#about" class="mobile-nav-compact">About</a>
-                        <a href="#instagram-shorts" class="mobile-nav-compact">Reels</a>
-                        <a href="#contact" class="mobile-nav-compact">Contact</a>
+                    <div class="text-xs font-bold text-brand-gold uppercase tracking-[0.2em] mb-4">Discover</div>
+                    <nav class="flex flex-col space-y-3">
+                        <a href="#home" class="mobile-nav-compact active">The Heritage</a>
+                        <a href="#collection" class="mobile-nav-compact">Masterpieces</a>
+                        <a href="#products" class="mobile-nav-compact">Boutique</a>
+                        <a href="#about" class="mobile-nav-compact">Our Legacy</a>
+                        <a href="#contact" class="mobile-nav-compact">Private Appointment</a>
                     </nav>
                 </div>
-                <!-- Categories -->
                 <div class="col-span-2 md:col-span-2">
-                    <div class="text-xs font-bold text-brand-muted uppercase tracking-wider mb-2">Shop by Category</div>
+                    <div class="text-xs font-bold text-brand-gold uppercase tracking-[0.2em] mb-4">Curated Collections</div>
                     <div class="flex flex-wrap gap-2" id="mobileCategoriesCompact"></div>
                 </div>
-                <!-- Social -->
                 <div class="col-span-2 md:col-span-1">
-                    <div class="text-xs font-bold text-brand-muted uppercase tracking-wider mb-2">Follow Us</div>
-                    <div class="flex gap-3">
-                        <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon-compact" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon-compact" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/919540816060" target="_blank" class="social-icon-compact" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <div class="text-xs font-bold text-brand-gold uppercase tracking-[0.2em] mb-4">Connect</div>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon-compact"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon-compact"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919540816060" target="_blank" class="social-icon-compact"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-brand-muted/10 px-4 py-2 text-[10px] text-brand-muted/60 text-center">
-                &copy; 2026 Bhavishya Silver Creation
-            </div>
         </div>
-        <!-- Overlay -->
-        <div id="mobileOverlay" class="fixed inset-0 bg-black/30 z-30 hidden opacity-0 transition-opacity duration-300"></div>
+        <div id="mobileOverlay" class="fixed inset-0 bg-black/60 z-30 hidden opacity-0 transition-opacity duration-500 backdrop-blur-sm"></div>
     </header>
 
     <!-- ════════════════════════════════════════════ -->
@@ -113,241 +104,295 @@
     <main>
 
         <!-- ===== HERO ===== -->
-        <section id="home" class="relative min-h-screen flex items-center pt-14 md:pt-16 overflow-hidden bg-black hero-section">
+        <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-dark hero-section">
             <div id="heroVideoWrapper" class="absolute inset-0 z-0 overflow-hidden">
-                <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto">
+                <video id="heroVideo" class="hero-video opacity-70" autoplay muted loop playsinline preload="auto">
                     <source src="assets/videos/hero-video.mp4" type="video/mp4" />
                 </video>
-                <div class="absolute inset-0 bg-black/40 z-[1]"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-[1]"></div>
             </div>
-            <div class="hero-glow w-[500px] h-[500px] bg-brand-gold/10 -top-20 -right-20 z-[2]"></div>
-            <div class="hero-glow w-[400px] h-[400px] bg-brand-gold/5 bottom-0 left-0 z-[2]"></div>
+
+            <!-- Glow Orbs -->
+            <div class="absolute top-20 right-20 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-3xl z-[2] animate-float-slow"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-gold/5 rounded-full blur-3xl z-[2] animate-float"></div>
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 py-12">
-                <div class="max-w-2xl" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-8 h-0.5 bg-brand-gold"></span>
-                        <span class="text-xs font-bold tracking-[0.25em] uppercase text-white/80">Luxury Jewellery</span>
+                <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-12 h-px bg-brand-gold"></span>
+                        <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Since 2010</span>
                     </div>
-                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl xl:text-8xl leading-[1.08] text-white mb-5 hero-title">
-                        The Catalyst <br />
-                        <span class="text-brand-gold italic relative">
-                            Destination
-                            <svg class="absolute -bottom-1 left-0 w-full h-4 text-brand-gold/30" viewBox="0 0 300 10">
-                                <path d="M0,5 Q75,0 150,5 Q225,10 300,5" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                    <h1 class="font-heading text-5xl sm:text-6xl lg:text-8xl leading-[1.1] text-white mb-6 drop-shadow-2xl">
+                        A Legacy of <br />
+                        <span class="text-brand-gold italic font-light relative">
+                            Timeless Elegance
+                            <svg class="absolute -bottom-2 left-0 w-full h-6 text-brand-gold/30" viewBox="0 0 400 12">
+                                <path d="M0,6 Q100,0 200,6 Q300,12 400,6" stroke="currentColor" fill="none" stroke-width="2.5"/>
                             </svg>
                         </span>
-                        For Gold &amp; Silver
                     </h1>
-                    <p class="text-white/80 text-base sm:text-lg max-w-md leading-relaxed mb-8">
-                        Bhavishya Silver Creation — a sub-brand of Manish Jewellers 21D. Premium gold and silver, crafted for elegance and every occasion.
+                    <p class="text-white/80 text-lg sm:text-xl max-w-xl leading-relaxed mb-10 font-light">
+                        Discover the pinnacle of fine jewelry. As an exclusive <strong class="text-brand-gold font-medium">MMTC PAMP Authorised Dealer</strong>, Manish Jewellers and Bhavishya Silver Creation offer masterfully crafted gold, silver, and diamond heirlooms designed to last generations.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#collection" class="btn-gold"><i class="fas fa-sparkle"></i> Explore Collection</a>
-                        <a href="#about" class="btn-outline-white"><i class="fas fa-book-open"></i> Our Story</a>
+
+                    <!-- Brand Strip -->
+                    <div class="flex flex-wrap items-center gap-3 mb-8 text-[10px] font-bold uppercase tracking-wider text-white/70">
+                        <span class="text-brand-gold">✦ Authorised Partners:</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">MMTC PAMP</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">ACPL True Silver</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">GIVA</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">EMRALD</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">KUNDAN</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-5">
+                        <a href="#collection" class="btn-gold"><i class="fas fa-gem"></i> View Collections</a>
+                        <a href="#about" class="btn-outline-white"><i class="fas fa-history"></i> Our Heritage</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== CATEGORIES ===== -->
-        <section id="categories" class="py-16 bg-brand-light">
+        <section id="categories" class="py-20 bg-brand-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">Shop by</span>
-                    <div class="section-divider"></div>
-                    <h2 class="font-heading text-3xl md:text-5xl text-brand-dark">Our Categories</h2>
-                    <p class="text-brand-muted max-w-xl mx-auto mt-2">Discover pieces crafted for your every moment.</p>
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Explore</span>
+                    <div class="section-divider mt-4 mb-6"></div>
+                    <h2 class="font-heading text-4xl md:text-5xl text-brand-dark">Our <span class="text-brand-gold italic">Collections</span></h2>
+                    <p class="text-brand-muted max-w-xl mx-auto mt-4">Each piece is a testament to our commitment to purity, artistry, and timeless design.</p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="categoriesGrid"></div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6" id="categoriesGrid" data-aos="fade-up"></div>
             </div>
         </section>
 
-        <!-- ===== COLLECTION (Featured Products) ===== -->
-        <section id="collection" class="py-16 md:py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">Curated For You</span>
-                    <div class="section-divider"></div>
-                    <h2 class="font-heading text-3xl md:text-5xl text-brand-dark">Featured Collection</h2>
-                    <p class="text-brand-muted max-w-xl mx-auto mt-2">Handpicked pieces that define elegance and craftsmanship.</p>
+        <!-- ===== ABOUT (ENHANCED WITH RICH CONTENT) ===== -->
+        <section id="about" class="py-24 bg-white overflow-hidden relative">
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <!-- IMAGE — natural order: first on all screens (top on mobile, left on lg) -->
+            <div data-aos="fade-right" data-aos-duration="1200" class="relative group">
+                <div class="absolute inset-0 border border-brand-gold/40 rounded-t-full transform translate-x-4 translate-y-4 transition duration-700 group-hover:translate-x-2 group-hover:translate-y-2 pointer-events-none"></div>
+                <div class="relative z-10 rounded-t-full overflow-hidden shadow-2xl bg-brand-dark">
+                    <img src="assets/about-hero.jpg" loading="lazy" alt="Master Craftsmanship" class="w-full h-[500px] sm:h-[600px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=1000&fit=crop'" />
                 </div>
-                <!-- Featured Products Grid -->
-                <div class="product-grid-ecom" id="collectionProductsGrid" data-aos="fade-up"></div>
-                <div class="text-center mt-10">
-                    <a href="#products" class="btn-gold inline-flex"><i class="fas fa-arrow-right"></i> View All Products</a>
+
+                <!-- Floating Trust Badge -->
+                <div class="absolute bottom-10 -left-6 bg-white/95 backdrop-blur-md border border-brand-gold/30 px-8 py-6 rounded-2xl shadow-2xl z-20 animate-float">
+                    <div class="text-center">
+                        <span class="block font-heading text-4xl text-brand-gold mb-1">15+</span>
+                        <span class="text-xs uppercase tracking-widest text-brand-dark font-bold">Years of Trust</span>
+                    </div>
+                </div>
+
+                <!-- Second Badge -->
+                <div class="absolute top-10 -right-4 bg-brand-gold/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-2xl z-20 animate-float-slow">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-certificate text-white text-xl"></i>
+                        <span class="text-xs uppercase tracking-widest text-white font-bold">MMTC PAMP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENT — natural order: second on all screens (bottom on mobile, right on lg) -->
+            <!-- text-center on mobile, text-left on md and up -->
+            <div data-aos="fade-left" data-aos-duration="1200" class="space-y-8 text-center md:text-left">
+                <div class="flex items-center gap-4 justify-center md:justify-start">
+                    <span class="w-12 h-px bg-brand-gold"></span>
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Our Legacy</span>
+                </div>
+                <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-tight">
+                    Crafting Memories,<br><span class="italic text-brand-muted">Defining Luxury.</span>
+                </h2>
+
+                <div class="space-y-5 text-brand-text/80 text-lg font-light leading-relaxed">
+                    <p>
+                        Founded in the heart of Faridabad in 2010, <strong class="text-brand-dark font-medium">Manish Jewellers 21D</strong> was born from a singular vision: to bring uncompromising purity and world-class artistry to discerning clientele. What began as a modest family-run atelier has flourished into one of North India's most respected jewellery destinations.
+                    </p>
+                    <p>
+                        We believe that true luxury is personal. It is the weight of an <strong class="text-brand-dark font-medium">MMTC PAMP</strong> certified gold bar, the brilliance of a flawless diamond, and the intricate filigree of our exclusive <strong class="text-brand-dark font-medium">Bhavishya Silver Creation</strong> line. Our sub-brand is a tribute to the future — where contemporary aesthetics meet ancestral craftsmanship.
+                    </p>
+                    <p>
+                        Over the last decade and a half, we have cultivated partnerships with India's most prestigious houses—including <span class="text-brand-dark font-medium">GIVA, ACPL True Silver, EMRALD, KUNDAN, and AUGMONT</span>—ensuring that our vaults hold only the exceptional. From bespoke bridal trousseaus to contemporary daily wear, your legacy begins here.
+                    </p>
+                </div>
+
+                <!-- Value Props — centered on mobile, left on md+ -->
+                <div class="grid grid-cols-2 gap-4 pt-6 border-t border-brand-gold/20 justify-items-center md:justify-items-start">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                            <i class="fas fa-gem text-sm"></i>
+                        </div>
+                        <span class="font-bold text-xs uppercase tracking-wider">Certified Purity</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                            <i class="fas fa-hammer text-sm"></i>
+                        </div>
+                        <span class="font-bold text-xs uppercase tracking-wider">Master Craftsmanship</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                            <i class="fas fa-hand-holding-heart text-sm"></i>
+                        </div>
+                        <span class="font-bold text-xs uppercase tracking-wider">Bespoke Services</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                            <i class="fas fa-shield-alt text-sm"></i>
+                        </div>
+                        <span class="font-bold text-xs uppercase tracking-wider">Authorised Dealer</span>
+                    </div>
+                </div>
+
+                <!-- CTA — centered on mobile, left on md+ -->
+                <div class="flex justify-center md:justify-start">
+                    <a href="https://wa.me/919540816060" target="_blank" class="btn-outline inline-flex mt-4"><i class="fab fa-whatsapp"></i> Book a Private Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- ===== WHY CHOOSE US ===== -->
+        <section id="why-us" class="py-20 bg-brand-light border-t border-brand-gold/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Why Choose Us</span>
+                    <div class="section-divider mt-4 mb-6"></div>
+                    <h2 class="font-heading text-4xl md:text-5xl text-brand-dark">The <span class="text-brand-gold italic">Manish</span> Difference</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
+                    <div class="luxury-card text-center p-8 border border-brand-gold/10 rounded-2xl hover:border-brand-gold/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white">
+                        <div class="w-20 h-20 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold text-3xl mb-6 transition-all duration-500 group-hover:scale-110">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-brand-dark mb-3">Certified Authenticity</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">Every piece is hallmarked and certified. We are MMTC PAMP authorised, ensuring 999.9+ purity in gold and silver.</p>
+                    </div>
+                    <div class="luxury-card text-center p-8 border border-brand-gold/10 rounded-2xl hover:border-brand-gold/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white">
+                        <div class="w-20 h-20 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold text-3xl mb-6 transition-all duration-500 group-hover:scale-110">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-brand-dark mb-3">Exquisite Craftsmanship</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">From intricate filigree to modern minimalism, our master craftsmen bring your vision to life with precision and passion.</p>
+                    </div>
+                    <div class="luxury-card text-center p-8 border border-brand-gold/10 rounded-2xl hover:border-brand-gold/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white">
+                        <div class="w-20 h-20 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold text-3xl mb-6 transition-all duration-500 group-hover:scale-110">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-brand-dark mb-3">Customer-Centric Approach</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">We treat you like family. Our team offers personalised guidance, custom designs, and a seamless shopping experience.</p>
+                    </div>
+                    <div class="luxury-card text-center p-8 border border-brand-gold/10 rounded-2xl hover:border-brand-gold/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white">
+                        <div class="w-20 h-20 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold text-3xl mb-6 transition-all duration-500 group-hover:scale-110">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-brand-dark mb-3">Industry Trust</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">With over 15 years of experience and 10,000+ happy clients, we are a name you can rely on for quality and integrity.</p>
+                    </div>
+                    <div class="luxury-card text-center p-8 border border-brand-gold/10 rounded-2xl hover:border-brand-gold/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white">
+                        <div class="w-20 h-20 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold text-3xl mb-6 transition-all duration-500 group-hover:scale-110">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-brand-dark mb-3">Multi-Brand Tie-ups</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">We bring you the best of GIVA, ACPL True Silver, EMRALD, KUNDAN, AUGMONT and more — all under one roof.</p>
+                    </div>
+                    <div class="luxury-card text-center p-8 border border-brand-gold/10 rounded-2xl hover:border-brand-gold/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 bg-white">
+                        <div class="w-20 h-20 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold text-3xl mb-6 transition-all duration-500 group-hover:scale-110">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl text-brand-dark mb-3">Bespoke Services</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">From custom engagement rings to personalised pendants, we craft exactly what you imagine, with attention to every detail.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== SHOP BY COLLECTION (Grid) ===== -->
-        <section id="shopByCollection" class="py-16 md:py-20 bg-brand-dark text-white relative overflow-hidden">
+        <!-- ===== TESTIMONIALS (SCROLLABLE ON MOBILE) ===== -->
+        <section id="testimonials" class="py-24 bg-brand-dark text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10 bg-[url('assets/cta-background.webp')] bg-cover bg-center"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">Discover</span>
-                    <div class="section-divider"></div>
-                    <h2 class="font-heading text-3xl md:text-5xl text-white">Shop by Collection</h2>
-                    <p class="text-brand-muted max-w-xl mx-auto mt-2">Explore our curated collections designed for every style and occasion.</p>
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">The Royal Treatment</span>
+                    <div class="section-divider mt-4 mb-6"></div>
+                    <h2 class="font-heading text-4xl md:text-5xl text-white">Words of <span class="text-brand-gold italic">Appreciation</span></h2>
+                    <p class="text-white/50 mt-4">What our patrons say about their experience with us.</p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="collectionGrid" data-aos="fade-up"></div>
-            </div>
-        </section>
 
-        <!-- ===== ABOUT ===== -->
-        <section id="about" class="py-16 md:py-24 bg-brand-light overflow-hidden">
-            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div data-aos="fade-right" data-aos-duration="1000" class="relative group order-2 lg:order-1">
-                        <div class="absolute inset-0 border-2 border-brand-gold rounded-2xl transform translate-x-3 translate-y-3 transition duration-500 group-hover:translate-x-1 group-hover:translate-y-1 pointer-events-none"></div>
-                        <div class="absolute -inset-4 bg-brand-gold/5 blur-3xl rounded-2xl pointer-events-none"></div>
-                        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                            <img src="assets/about-hero.jpg" loading="lazy" alt="Bhavishya Silver Creation Craftsmanship" class="w-full h-[480px] sm:h-[560px] lg:h-[620px] object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/fbf7f0/dcb36d?text=About+Us'" />
-                            <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-brand-dark/80 to-transparent"></div>
-                        </div>
-                        <div class="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-brand-dark text-white px-5 md:px-7 py-4 md:py-5 rounded-xl shadow-2xl z-20 flex items-center gap-6 md:gap-8">
-                            <div class="text-center">
-                                <span class="block font-heading text-2xl md:text-3xl text-brand-gold">10+</span>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-wider text-white/70">Years</span>
-                            </div>
-                            <div class="w-px h-10 bg-white/20"></div>
-                            <div class="text-center">
-                                <span class="block font-heading text-2xl md:text-3xl text-brand-gold">10k+</span>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-wider text-white/70">Clients</span>
-                            </div>
-                        </div>
-                        <div class="absolute -top-3 -right-3 md:-top-5 md:-right-5 bg-brand-gold text-brand-dark px-3 md:px-4 py-2 md:py-3 rounded-full shadow-xl z-20 flex items-center gap-2">
-                            <i class="fas fa-star text-xs md:text-sm"></i>
-                            <span class="text-[8px] md:text-[10px] font-bold uppercase tracking-wider">Trusted</span>
-                        </div>
+                <!-- Swipeable Container -->
+                <div class="testimonials-scroll-wrapper" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonials-scroll-container" id="testimonialsGrid">
+                        <!-- Populated by JS -->
                     </div>
-                    <div data-aos="fade-left" data-aos-duration="1000" class="order-1 lg:order-2 space-y-6">
-                        <div class="flex items-center gap-3">
-                            <span class="w-10 h-0.5 bg-brand-gold"></span>
-                            <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">About Us</span>
-                        </div>
-                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl text-brand-dark leading-tight">
-                            Bhavishya Silver Creation
-                        </h2>
-                        <p class="font-heading text-xl sm:text-2xl text-brand-gold font-medium -mt-2">
-                            Sub-brand of Manish Jewellers 21D
-                        </p>
-                        <div class="space-y-4 text-gray-600 leading-relaxed text-base md:text-lg">
-                            <p>
-                                At <strong class="text-brand-dark">Manish Jewellers 21D</strong>, we celebrate style, tradition, and self-expression. Our carefully curated collection offers beautiful jewellery that blends classic craftsmanship with modern trends — designed to be accessible and perfect for every occasion, from everyday elegance to festive celebrations.
-                            </p>
-                            <p>
-                                Each piece is crafted to make you feel confident, radiant, and uniquely yourself. We believe jewellery is more than an accessory — it's a statement, a vibe, and a reflection of who you are. Let us help you wear it with <strong class="text-brand-dark">pride</strong>.
-                            </p>
-                        </div>
-                        <div class="grid grid-cols-2 gap-3 md:gap-4 pt-4 border-t border-brand-gold/20">
-                            <div class="flex items-center gap-3 text-brand-dark">
-                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                                    <i class="fas fa-gem text-brand-gold text-sm md:text-base"></i>
-                                </div>
-                                <span class="font-bold text-xs md:text-sm uppercase tracking-wider">Certified Purity</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-brand-dark">
-                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                                    <i class="fas fa-hammer text-brand-gold text-sm md:text-base"></i>
-                                </div>
-                                <span class="font-bold text-xs md:text-sm uppercase tracking-wider">Master Craftsmanship</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-brand-dark">
-                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                                    <i class="fas fa-hand-holding-heart text-brand-gold text-sm md:text-base"></i>
-                                </div>
-                                <span class="font-bold text-xs md:text-sm uppercase tracking-wider">Bespoke Services</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-brand-dark">
-                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                                    <i class="fas fa-shield-alt text-brand-gold text-sm md:text-base"></i>
-                                </div>
-                                <span class="font-bold text-xs md:text-sm uppercase tracking-wider">Authorised Dealer</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 md:p-5 bg-brand-dark/5 rounded-xl border border-brand-gold/20 hover:border-brand-gold/40 transition duration-300">
-                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                                <i class="fas fa-award text-brand-gold text-lg md:text-2xl"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-brand-gold block">Authorised Dealer</span>
-                                <p class="text-xs md:text-sm text-brand-muted">MMTC-PAMP India Pvt. Ltd. — Minted Gold &amp; Silver Coins/Bars</p>
-                            </div>
-                        </div>
+                    <!-- Scroll Hint (mobile) -->
+                    <div class="scroll-hint md:hidden mt-6 text-center text-white/30 text-sm animate-pulse">
+                        <i class="fas fa-chevron-left mr-2"></i> Swipe to explore <i class="fas fa-chevron-right ml-2"></i>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== SPOTLIGHT / PERFECT DIAMOND (Carousel) ===== -->
-        <section id="spotlight" class="py-16 bg-white">
+        <!-- ===== BRANDS SECTION ===== -->
+        <section id="brands" class="py-20 bg-white border-t border-brand-gold/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between mb-8" data-aos="fade-up">
-                    <div>
-                        <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">Spotlight</span>
-                        <h2 class="font-heading text-3xl md:text-4xl text-brand-dark">Perfect Diamond <span class="text-brand-gold italic">Collection</span></h2>
-                    </div>
-                    <div class="flex gap-2">
-                        <button id="diamondPrev" class="w-10 h-10 rounded-full border border-brand-muted/20 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-                        <button id="diamondNext" class="w-10 h-10 rounded-full border border-brand-muted/20 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Authorised Partners</span>
+                    <div class="section-divider mt-4 mb-6"></div>
+                    <h2 class="font-heading text-4xl md:text-5xl text-brand-dark">Our <span class="text-brand-gold italic">Trusted</span> Brands</h2>
+                    <p class="text-brand-muted max-w-xl mx-auto mt-4">Manish Jewellers is proud to partner with India's most prestigious jewellery houses.</p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="perfectDiamondGrid" data-aos="fade-up"></div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" id="brandsGrid" data-aos="fade-up">
+                    <!-- Rendered by JS -->
+                </div>
+                <div class="text-center mt-12">
+                    <span class="inline-flex items-center gap-3 text-sm font-bold text-brand-dark bg-brand-light px-8 py-4 rounded-full border border-brand-gold/20 shadow-lg">
+                        <i class="fas fa-shield-alt text-brand-gold text-lg"></i> MMTC PAMP — LBMA GOOD DELIVERY REFINER
+                    </span>
+                </div>
             </div>
         </section>
 
-        <!-- ===== PRODUCTS ===== -->
-        <section id="products" class="py-6 md:py-10 bg-white">
+        <!-- ===== PRODUCTS BOUTIQUE ===== -->
+        <section id="products" class="py-24 bg-brand-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between mb-4" data-aos="fade-up">
-                    <div>
-                        <h2 class="font-heading text-xl md:text-2xl text-brand-dark">ETHNIC DAILY WEAR</h2>
-                        <span class="text-xs text-brand-muted" id="productCount">0 products</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <button class="text-xs font-bold text-brand-dark uppercase tracking-wider flex items-center gap-1">
-                            <i class="fas fa-sliders-h"></i> Filter
-                        </button>
-                        <span class="text-xs text-brand-muted">|</span>
-                        <button class="text-xs font-bold text-brand-dark uppercase tracking-wider flex items-center gap-1">
-                            Featured <i class="fas fa-chevron-down text-[10px]"></i>
-                        </button>
-                    </div>
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">The Boutique</span>
+                    <div class="section-divider mt-4 mb-6"></div>
+                    <h2 class="font-heading text-4xl md:text-5xl text-brand-dark">Masterpiece <span class="text-brand-gold italic">Collection</span></h2>
+                    <p class="text-brand-muted mt-4" id="productCount">Curating excellence...</p>
                 </div>
-                <div class="flex flex-wrap gap-2 mb-5" id="offerFilters" data-aos="fade-up"></div>
+
+                <div class="flex flex-wrap justify-center gap-3 mb-12" id="offerFilters" data-aos="fade-up"></div>
+
                 <div class="product-grid-ecom" id="allProductsGrid" data-aos="fade-up"></div>
             </div>
         </section>
 
-        <!-- ===== TESTIMONIALS ===== -->
-        <section id="testimonials" class="py-16 bg-brand-light">
+        <!-- ===== INSTAGRAM REELS ===== -->
+        <section id="instagram-shorts" class="py-24 bg-white relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">Testimonials</span>
-                    <div class="section-divider"></div>
-                    <h2 class="font-heading text-3xl md:text-5xl text-brand-dark">What Our Customers Say</h2>
-                    <p class="text-brand-muted max-w-xl mx-auto mt-2">Real stories from real people.</p>
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Follow Us</span>
+                    <div class="section-divider mt-4 mb-6"></div>
+                    <h2 class="font-heading text-4xl md:text-5xl text-brand-dark">Instagram <span class="text-brand-gold italic">Reels</span></h2>
+                    <p class="text-brand-muted mt-4">Hover to watch — click to visit our Instagram.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="testimonialsGrid"></div>
-            </div>
-        </section>
 
-        <!-- ===== INSTAGRAM SHORTS ===== -->
-        <section id="instagram-shorts" class="py-16 bg-white relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10" data-aos="fade-up">
-                    <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">Follow Us</span>
-                    <div class="section-divider"></div>
-                    <h2 class="font-heading text-3xl md:text-5xl text-brand-dark">Instagram <span class="text-brand-gold italic">Reels</span></h2>
-                    <p class="text-brand-muted max-w-xl mx-auto mt-2">Hover over a reel to watch — click to visit our Instagram.</p>
-                </div>
-                <div class="ticker-wrap mb-10" data-aos="fade-up">
+                <!-- Ticker -->
+                <div class="ticker-wrap mb-12" data-aos="fade-up">
                     <div class="ticker">
-                        <span class="ticker-text">✨ Bhavishya Silver Creation — Premium Gold &amp; Silver ✦ Authorised Dealer — MMTC-PAMP ✦ Shop Now at Manish Jewellers 21D ✦ Faridabad's Trusted Jeweller Since 2010 ✦</span>
+                        <span class="ticker-text">✦ Manish Jewellers — MMTC PAMP Authorised Dealer ✦ Bhavishya Silver Creation — Premium Gold &amp; Silver ✦ Trusted Since 2010 ✦ Shop Now at Faridabad ✦</span>
                     </div>
                 </div>
+
                 <div class="reels-grid" id="reelsGrid" data-aos="fade-up"></div>
-                <div class="text-center mt-10">
+
+                <div class="text-center mt-12">
                     <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="btn-gold inline-flex items-center gap-3">
                         <i class="fab fa-instagram text-xl"></i> Follow @manish_jewellers_21d_faridabad
                     </a>
@@ -356,103 +401,105 @@
         </section>
 
         <!-- ===== CONTACT ===== -->
-        <section id="contact" class="py-16 bg-brand-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <span class="text-xs font-bold tracking-[0.25em] uppercase text-brand-gold">Get In Touch</span>
-                    <div class="section-divider"></div>
-                    <h2 class="font-heading text-3xl md:text-5xl text-brand-dark">Contact Us</h2>
-                    <p class="text-brand-muted max-w-xl mx-auto mt-2">We are here to assist you with bespoke designs and expert advice.</p>
+        <section id="contact" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 bg-[url('assets/cta-background.webp')] bg-cover bg-center"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">At Your Service</span>
+                    <div class="section-divider mt-4 mb-6"></div>
+                    <h2 class="font-heading text-4xl md:text-5xl text-white">Visit Our <span class="text-brand-gold italic">Atelier</span></h2>
+                    <p class="text-white/50 mt-4">We are here to assist you with bespoke designs and expert advice.</p>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12" data-aos="fade-up">
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-brand-muted/10">
-                        <h3 class="font-heading text-2xl text-brand-dark mb-6 border-b border-brand-muted/20 pb-4">Contact Information</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-gold shrink-0 text-xl">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-2 gap-12" data-aos="fade-up">
+                    <div class="bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10 shadow-2xl">
+                        <h3 class="font-heading text-3xl text-white mb-8 border-b border-white/10 pb-4">Contact Information</h3>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-5">
+                                <div class="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold text-2xl border border-brand-gold/20 shrink-0">
                                     <i class="fas fa-store"></i>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-brand-dark mb-1">Business Name</h5>
-                                    <p class="text-gray-600 font-semibold">Manish Jewellers</p>
-                                    <p class="text-gray-600 text-sm">(Bhavishya Silver Creation)</p>
+                                    <h5 class="font-bold text-white tracking-wide mb-1">Business Name</h5>
+                                    <p class="text-white/80 font-medium">Manish Jewellers</p>
+                                    <p class="text-white/60 text-sm">(Bhavishya Silver Creation)</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-gold shrink-0 text-xl">
+                            <div class="flex items-start gap-5">
+                                <div class="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold text-2xl border border-brand-gold/20 shrink-0">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-brand-dark mb-1">Our Store</h5>
-                                    <p class="text-gray-600 leading-relaxed">Shop No. 14, Sector 21D,<br />Near Police Chowki, Faridabad,<br />Haryana – 121012</p>
-                                    <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="text-brand-gold text-sm font-semibold hover:underline inline-flex items-center gap-1 mt-1">
+                                    <h5 class="font-bold text-white tracking-wide mb-1">Our Flagship Store</h5>
+                                    <p class="text-white/80 font-light leading-relaxed">Shop No. 14, Sector 21D,<br />Near Police Chowki, Faridabad,<br />Haryana – 121012</p>
+                                    <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="text-brand-gold text-sm font-semibold hover:underline inline-flex items-center gap-1 mt-2">
                                         <i class="fas fa-directions"></i> Get Directions
                                     </a>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-gold shrink-0 text-xl">
+                            <div class="flex items-start gap-5">
+                                <div class="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold text-2xl border border-brand-gold/20 shrink-0">
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-brand-dark mb-1">Call Us</h5>
-                                    <p class="text-gray-600">+91 9891001400</p>
-                                    <p class="text-gray-600">+91 9540816060</p>
+                                    <h5 class="font-bold text-white tracking-wide mb-1">Direct Line</h5>
+                                    <p class="text-white/80 font-light">+91 9891001400</p>
+                                    <p class="text-white/80 font-light">+91 9540816060</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-gold shrink-0 text-xl">
+                            <div class="flex items-start gap-5">
+                                <div class="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold text-2xl border border-brand-gold/20 shrink-0">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-brand-dark mb-1">Email Us</h5>
-                                    <p class="text-gray-600">info@bhavishyasilver.com</p>
+                                    <h5 class="font-bold text-white tracking-wide mb-1">Email</h5>
+                                    <p class="text-white/80 font-light">info@bhavishyasilver.com</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-8 pt-6 border-t border-brand-muted/20 flex gap-3">
-                            <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon !bg-brand-light" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon !bg-brand-light" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://wa.me/919540816060" target="_blank" class="social-icon !bg-brand-light" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="social-icon !bg-brand-light" aria-label="Directions"><i class="fas fa-map-pin"></i></a>
+                        <div class="mt-8 pt-6 border-t border-white/10 flex gap-4">
+                            <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon bg-white/10 text-white hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon bg-white/10 text-white hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/919540816060" target="_blank" class="social-icon bg-white/10 text-white hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="social-icon bg-white/10 text-white hover:bg-brand-gold hover:text-brand-dark"><i class="fas fa-map-pin"></i></a>
                         </div>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-brand-muted/10">
-                        <h3 class="font-heading text-2xl text-brand-dark mb-6 border-b border-brand-muted/20 pb-4">Send a Message</h3>
-                        <form id="contactForm" class="space-y-5">
+
+                    <div class="bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10 shadow-2xl">
+                        <h3 class="font-heading text-3xl text-white mb-8 border-b border-white/10 pb-4">Private Inquiry</h3>
+                        <form id="contactForm" class="space-y-6">
                             <div>
-                                <label class="block text-sm font-bold text-brand-dark mb-1.5 uppercase tracking-wide">Your Name</label>
-                                <input type="text" id="contactName" required class="form-input" placeholder="Your full name" />
+                                <label class="block text-xs font-bold text-brand-gold mb-2 uppercase tracking-widest">Name</label>
+                                <input type="text" id="contactName" required class="w-full bg-transparent border-b border-white/20 pb-3 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-white/30" placeholder="Your full name" />
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-brand-dark mb-1.5 uppercase tracking-wide">Email Address</label>
-                                <input type="email" id="contactEmail" required class="form-input" placeholder="you@example.com" />
+                                <label class="block text-xs font-bold text-brand-gold mb-2 uppercase tracking-widest">Email</label>
+                                <input type="email" id="contactEmail" required class="w-full bg-transparent border-b border-white/20 pb-3 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-white/30" placeholder="you@example.com" />
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-brand-dark mb-1.5 uppercase tracking-wide">Message</label>
-                                <textarea id="contactMessage" required rows="4" class="form-input resize-y" placeholder="Tell us what you're looking for…"></textarea>
+                                <label class="block text-xs font-bold text-brand-gold mb-2 uppercase tracking-widest">Inquiry</label>
+                                <textarea id="contactMessage" required rows="4" class="w-full bg-transparent border-b border-white/20 pb-3 text-white focus:outline-none focus:border-brand-gold transition-colors resize-none placeholder:text-white/30" placeholder="Tell us what masterpiece you seek..."></textarea>
                             </div>
-                            <!-- FIXED: proper submit button, no invalid attributes -->
-                            <button type="submit" class="btn-gold w-full justify-center">
-                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            <button type="submit" class="btn-gold w-full justify-center mt-4">
+                                <i class="fab fa-whatsapp text-lg"></i> Connect via WhatsApp
                             </button>
                         </form>
-                        <p class="text-xs text-brand-muted mt-3 text-center">Your message will be sent directly to our WhatsApp.</p>
+                        <p class="text-xs text-white/30 mt-3 text-center">Your message will be sent directly to our WhatsApp.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== CTA ===== -->
-        <section class="py-16 min-h-[280px] bg-brand-dark text-white text-center relative overflow-hidden flex items-center justify-center">
-            <div class="absolute inset-0 bg-[url('assets/cta-background.webp')] bg-cover bg-center opacity-70"></div>
+        <section class="py-20 bg-brand-gold text-brand-dark text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('assets/cta-background.webp')] bg-cover bg-center"></div>
             <div class="relative z-10 max-w-3xl mx-auto px-4">
-                <div class="w-16 h-16 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold text-2xl mb-5 animate-float">
+                <div class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center text-brand-dark text-3xl mb-6 animate-float">
                     <i class="fas fa-sparkle"></i>
                 </div>
-                <h2 class="font-heading text-3xl md:text-4xl mb-4">Experience the <span class="text-brand-gold italic">Magic</span></h2>
-                <p class="text-brand-muted text-lg mb-7 max-w-xl mx-auto">Step into the world of luxury. Browse our latest collections and find the perfect piece to elevate your everyday elegance.</p>
-                <a href="#collection" class="btn-gold inline-flex"><i class="fas fa-gem"></i> Explore Collection</a>
+                <h2 class="font-heading text-4xl md:text-5xl mb-4">Experience the <span class="italic text-white">Magic</span></h2>
+                <p class="text-brand-dark/80 text-lg mb-8 max-w-xl mx-auto">Step into the world of luxury. Browse our latest collections and find the perfect piece to elevate your everyday elegance.</p>
+                <a href="#collection" class="btn-dark inline-flex"><i class="fas fa-gem"></i> Explore Collection</a>
             </div>
         </section>
 
@@ -461,60 +508,57 @@
     <!-- ════════════════════════════════════════════ -->
     <!-- FOOTER -->
     <!-- ════════════════════════════════════════════ -->
-    <footer class="pt-12 pb-6 border-t border-brand-muted/10" style="background-color:#FDEEEC;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-                <div class="space-y-3">
-                    <img src="assets/logo-black.png" alt="Bhavishya Silver Creation" class="h-12 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-                    <p class="text-brand-muted text-sm leading-relaxed max-w-xs" style="color:#5a6b62;">The Wholesale Destination for Premium Gold &amp; Silver. A sub-brand of Manish Jewellers 21D, Faridabad.</p>
-                    <div class="flex gap-3">
-                        <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon !bg-white/60 !text-brand-dark hover:!bg-brand-gold hover:!text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon !bg-white/60 !text-brand-dark hover:!bg-brand-gold hover:!text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/919540816060" target="_blank" class="social-icon !bg-white/60 !text-brand-dark hover:!bg-brand-gold hover:!text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="social-icon !bg-white/60 !text-brand-dark hover:!bg-brand-gold hover:!text-white" aria-label="Directions"><i class="fas fa-map-pin"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-heading text-lg text-brand-dark mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm" style="color:#5a6b62;">
-                        <li><a href="#home" class="hover:text-brand-dark transition">Home</a></li>
-                        <li><a href="#about" class="hover:text-brand-dark transition">About Us</a></li>
-                        <li><a href="#collection" class="hover:text-brand-dark transition">Collection</a></li>
-                        <li><a href="#products" class="hover:text-brand-dark transition">Shop All</a></li>
-                        <li><a href="#instagram-shorts" class="hover:text-brand-dark transition">Reels</a></li>
-                        <li><a href="#contact" class="hover:text-brand-dark transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-heading text-lg text-brand-dark mb-4">Useful Links</h4>
-                    <ul class="space-y-2 text-sm" style="color:#5a6b62;">
-                        <li><a href="#" class="hover:text-brand-dark transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-brand-dark transition">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-brand-dark transition">Shipping &amp; Returns</a></li>
-                        <li><a href="#" class="hover:text-brand-dark transition">FAQs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-heading text-lg text-brand-dark mb-4">Subscribe</h4>
-                    <p class="text-sm mb-3" style="color:#5a6b62;">Get 10% off your first order and weekly exclusive updates.</p>
-                    <form class="space-y-3" id="subscribeForm" onsubmit="event.preventDefault(); alert('Subscribed!');">
-                        <input type="email" placeholder="Your Email Address" required class="w-full px-4 py-2.5 bg-white/60 border border-brand-muted/20 rounded-xl focus:outline-none focus:border-brand-gold text-brand-dark text-sm transition" />
-                        <button type="submit" class="w-full bg-brand-gold hover:bg-brand-gold-hover text-brand-dark py-2.5 rounded-xl text-sm font-bold uppercase tracking-wider transition">Subscribe</button>
-                    </form>
+    <footer class="pt-16 pb-8 bg-brand-dark text-white/70 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+            <div class="col-span-2 md:col-span-1 text-center md:text-left">
+                <img src="assets/logo-image.png" alt="Manish Jewellers" class="h-16 md:h-20 w-auto object-contain mx-auto md:mx-auto mb-4" onerror="this.style.display='none';" />
+                <p class="text-sm text-white/50 leading-relaxed max-w-xs mx-auto md:mx-auto">The Wholesale Destination for Premium Gold &amp; Silver. A sub-brand of Manish Jewellers 21D, Faridabad.</p>
+                <div class="flex justify-center md:justify-start gap-3 mt-4">
+                    <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919540816060" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fas fa-map-pin"></i></a>
                 </div>
             </div>
-            <div class="pt-4 border-t border-brand-muted/20 flex flex-col md:flex-row justify-between items-center gap-3">
-                <p class="text-sm" style="color:#5a6b62;">&copy; 2026 Bhavishya Silver Creation. All Rights Reserved.</p>
-                <div class="flex gap-4 text-2xl" style="color:#5a6b62;">
-                    <i class="fab fa-cc-visa hover:text-brand-dark transition cursor-pointer"></i>
-                    <i class="fab fa-cc-mastercard hover:text-brand-dark transition cursor-pointer"></i>
-                    <i class="fab fa-cc-paypal hover:text-brand-dark transition cursor-pointer"></i>
-                </div>
+            <div class="text-center md:text-left">
+                <h4 class="font-heading text-lg text-white mb-4">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#home" class="hover:text-brand-gold transition">Home</a></li>
+                    <li><a href="#products" class="hover:text-brand-gold transition">Boutique</a></li>
+                    <li><a href="#about" class="hover:text-brand-gold transition">Our Legacy</a></li>
+                    <li><a href="#contact" class="hover:text-brand-gold transition">Contact</a></li>
+                </ul>
+            </div>
+            <div class="text-center md:text-left">
+                <h4 class="font-heading text-lg text-white mb-4">Collections</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#products" class="hover:text-brand-gold transition">Gold Jewelry</a></li>
+                    <li><a href="#products" class="hover:text-brand-gold transition">Silver Jewelry</a></li>
+                    <li><a href="#products" class="hover:text-brand-gold transition">Diamond Jewelry</a></li>
+                    <li><a href="#products" class="hover:text-brand-gold transition">Platinum</a></li>
+                </ul>
+            </div>
+            <!-- Subscribe section hidden on mobile (md and below) -->
+            <div class="text-center md:text-left hidden md:block">
+                <h4 class="font-heading text-lg text-white mb-4">Subscribe</h4>
+                <p class="text-sm text-white/50 mb-4">Get 10% off your first order and weekly exclusive updates.</p>
+                <form id="subscribeForm" class="space-y-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <input type="email" placeholder="Your Email Address" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-brand-gold text-white text-sm transition" />
+                    <button type="submit" class="w-full bg-brand-gold hover:bg-brand-gold-hover text-brand-dark py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition">Subscribe</button>
+                </form>
             </div>
         </div>
-    </footer>
+        <div class="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+            <span>&copy; 2026 Manish Jewellers — Bhavishya Silver Creation. All Rights Reserved.</span>
+            <span>Made with <i class="fas fa-heart text-brand-gold text-xs"></i> by Manish Jewellers</span>
+        </div>
+    </div>
+</footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+    <script src="script.js">
+    </script>
 </body>
 </html>
