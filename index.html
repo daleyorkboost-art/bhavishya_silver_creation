@@ -56,11 +56,12 @@
                     <span class="hamburger-line-compact"></span>
                 </button>
 
-                <a href="#home" class="flex mr-12 items-center gap-2 group shrink-0 absolute left-1/2 -translate-x-1/2">
+                <a href="#home" class="flex items-center gap-2 group shrink-0 absolute lg:left-1/2 md:left-1/2 lg:-translate-x-1/2 md:-translate-x-1/2 left-1/3 -translate-x-1/3">
                     <img src="assets/logo-image.png" alt="Manish Jewellers" class="h-14 md:h-20 xl:h-24 w-auto object-contain transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                 </a>
 
-                <div class="flex items-center gap-3 md:gap-4 shrink-0">
+                <!-- ✅ FIXED: Header social icons now wrapped in anchor tags -->
+                <div class="flex items-center gap-2 shrink-0">
                     <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon-header" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon-header" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/919540816060" target="_blank" class="social-icon-header" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
@@ -112,7 +113,6 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-[1]"></div>
             </div>
 
-            <!-- Glow Orbs -->
             <div class="absolute top-20 right-20 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-3xl z-[2] animate-float-slow"></div>
             <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-gold/5 rounded-full blur-3xl z-[2] animate-float"></div>
 
@@ -122,7 +122,7 @@
                         <span class="w-12 h-px bg-brand-gold"></span>
                         <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Since 2010</span>
                     </div>
-                    <h1 class="font-heading text-5xl sm:text-6xl lg:text-8xl leading-[1.1] text-white mb-6 drop-shadow-2xl">
+                    <h1 class="font-heading text-5xl sm:text-6xl lg:text-8xl leading-[1.1] text-white mb-6 drop-shadow-2xl hero-title">
                         A Legacy of <br />
                         <span class="text-brand-gold italic font-light relative">
                             Timeless Elegance
@@ -135,7 +135,6 @@
                         Discover the pinnacle of fine jewelry. As an exclusive <strong class="text-brand-gold font-medium">MMTC PAMP Authorised Dealer</strong>, Manish Jewellers and Bhavishya Silver Creation offer masterfully crafted gold, silver, and diamond heirlooms designed to last generations.
                     </p>
 
-                    <!-- Brand Strip -->
                     <div class="flex flex-wrap items-center gap-3 mb-8 text-[10px] font-bold uppercase tracking-wider text-white/70">
                         <span class="text-brand-gold">✦ Authorised Partners:</span>
                         <span class="px-3 py-1.5 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">MMTC PAMP</span>
@@ -166,97 +165,89 @@
             </div>
         </section>
 
-        <!-- ===== ABOUT (ENHANCED WITH RICH CONTENT) ===== -->
+        <!-- ===== ABOUT ===== -->
         <section id="about" class="py-24 bg-white overflow-hidden relative">
-    <!-- Decorative Elements -->
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <!-- IMAGE — natural order: first on all screens (top on mobile, left on lg) -->
-            <div data-aos="fade-right" data-aos-duration="1200" class="relative group">
-                <div class="absolute inset-0 border border-brand-gold/40 rounded-t-full transform translate-x-4 translate-y-4 transition duration-700 group-hover:translate-x-2 group-hover:translate-y-2 pointer-events-none"></div>
-                <div class="relative z-10 rounded-t-full overflow-hidden shadow-2xl bg-brand-dark">
-                    <img src="assets/about-hero.jpg" loading="lazy" alt="Master Craftsmanship" class="w-full h-[500px] sm:h-[600px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=1000&fit=crop'" />
-                </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    <div data-aos="fade-right" data-aos-duration="1200" class="relative group">
+                        <div class="absolute inset-0 border border-brand-gold/40 rounded-t-full transform translate-x-4 translate-y-4 transition duration-700 group-hover:translate-x-2 group-hover:translate-y-2 pointer-events-none"></div>
+                        <div class="relative z-10 rounded-t-full overflow-hidden shadow-2xl bg-brand-dark">     
+                            <img src="/assets/about-img.jpeg" loading="lazy" alt="Master Craftsmanship" class="w-full h-[500px] sm:h-[600px] lg:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&h=1000&fit=crop'" />
+                        </div>
 
-                <!-- Floating Trust Badge -->
-                <div class="absolute bottom-10 -left-6 bg-white/95 backdrop-blur-md border border-brand-gold/30 px-8 py-6 rounded-2xl shadow-2xl z-20 animate-float">
-                    <div class="text-center">
-                        <span class="block font-heading text-4xl text-brand-gold mb-1">15+</span>
-                        <span class="text-xs uppercase tracking-widest text-brand-dark font-bold">Years of Trust</span>
+                        <div class="absolute bottom-10 -left-6 bg-white/95 backdrop-blur-md border border-brand-gold/30 px-8 py-6 rounded-2xl shadow-2xl z-20 animate-float">
+                            <div class="text-center">
+                                <span class="block font-heading text-4xl text-brand-gold mb-1">15+</span>
+                                <span class="text-xs uppercase tracking-widest text-brand-dark font-bold">Years of Trust</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-10 -right-4 bg-brand-gold/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-2xl z-20 animate-float-slow">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-certificate text-white text-xl"></i>
+                                <span class="text-xs uppercase tracking-widest text-white font-bold">MMTC PAMP</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Second Badge -->
-                <div class="absolute top-10 -right-4 bg-brand-gold/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-2xl z-20 animate-float-slow">
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-certificate text-white text-xl"></i>
-                        <span class="text-xs uppercase tracking-widest text-white font-bold">MMTC PAMP</span>
+                    <div data-aos="fade-left" data-aos-duration="1200" class="space-y-8 text-center md:text-left">
+                        <div class="flex items-center gap-4 justify-center md:justify-start">
+                            <span class="w-12 h-px bg-brand-gold"></span>
+                            <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Our Legacy</span>
+                        </div>
+                        <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-tight">
+                            Crafting Memories,<br><span class="italic text-brand-muted">Defining Luxury.</span>
+                        </h2>
+
+                        <div class="space-y-5 text-brand-text/80 text-lg font-light leading-relaxed">
+                            <p>
+                                Founded in the heart of Faridabad in 2010, <strong class="text-brand-dark font-medium">Manish Jewellers 21D</strong> was born from a singular vision: to bring uncompromising purity and world-class artistry to discerning clientele. What began as a modest family-run atelier has flourished into one of North India's most respected jewellery destinations.
+                            </p>
+                            <p>
+                                We believe that true luxury is personal. It is the weight of an <strong class="text-brand-dark font-medium">MMTC PAMP</strong> certified gold bar, the brilliance of a flawless diamond, and the intricate filigree of our exclusive <strong class="text-brand-dark font-medium">Bhavishya Silver Creation</strong> line. Our sub-brand is a tribute to the future — where contemporary aesthetics meet ancestral craftsmanship.
+                            </p>
+                            <p>
+                                Over the last decade and a half, we have cultivated partnerships with India's most prestigious houses—including <span class="text-brand-dark font-medium">GIVA, ACPL True Silver, EMRALD, KUNDAN, and AUGMONT</span>—ensuring that our vaults hold only the exceptional. From bespoke bridal trousseaus to contemporary daily wear, your legacy begins here.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 pt-6 border-t border-brand-gold/20 justify-items-center md:justify-items-start">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fas fa-gem text-sm"></i>
+                                </div>
+                                <span class="font-bold text-xs uppercase tracking-wider">Certified Purity</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fas fa-hammer text-sm"></i>
+                                </div>
+                                <span class="font-bold text-xs uppercase tracking-wider">Master Craftsmanship</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fas fa-hand-holding-heart text-sm"></i>
+                                </div>
+                                <span class="font-bold text-xs uppercase tracking-wider">Bespoke Services</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fas fa-shield-alt text-sm"></i>
+                                </div>
+                                <span class="font-bold text-xs uppercase tracking-wider">Authorised Dealer</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center md:justify-start">
+                            <a href="https://wa.me/919540816060" target="_blank" class="btn-outline inline-flex mt-4"><i class="fab fa-whatsapp"></i> Book a Private Consultation</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- CONTENT — natural order: second on all screens (bottom on mobile, right on lg) -->
-            <!-- text-center on mobile, text-left on md and up -->
-            <div data-aos="fade-left" data-aos-duration="1200" class="space-y-8 text-center md:text-left">
-                <div class="flex items-center gap-4 justify-center md:justify-start">
-                    <span class="w-12 h-px bg-brand-gold"></span>
-                    <span class="text-xs font-bold tracking-[0.3em] uppercase text-brand-gold">Our Legacy</span>
-                </div>
-                <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-tight">
-                    Crafting Memories,<br><span class="italic text-brand-muted">Defining Luxury.</span>
-                </h2>
-
-                <div class="space-y-5 text-brand-text/80 text-lg font-light leading-relaxed">
-                    <p>
-                        Founded in the heart of Faridabad in 2010, <strong class="text-brand-dark font-medium">Manish Jewellers 21D</strong> was born from a singular vision: to bring uncompromising purity and world-class artistry to discerning clientele. What began as a modest family-run atelier has flourished into one of North India's most respected jewellery destinations.
-                    </p>
-                    <p>
-                        We believe that true luxury is personal. It is the weight of an <strong class="text-brand-dark font-medium">MMTC PAMP</strong> certified gold bar, the brilliance of a flawless diamond, and the intricate filigree of our exclusive <strong class="text-brand-dark font-medium">Bhavishya Silver Creation</strong> line. Our sub-brand is a tribute to the future — where contemporary aesthetics meet ancestral craftsmanship.
-                    </p>
-                    <p>
-                        Over the last decade and a half, we have cultivated partnerships with India's most prestigious houses—including <span class="text-brand-dark font-medium">GIVA, ACPL True Silver, EMRALD, KUNDAN, and AUGMONT</span>—ensuring that our vaults hold only the exceptional. From bespoke bridal trousseaus to contemporary daily wear, your legacy begins here.
-                    </p>
-                </div>
-
-                <!-- Value Props — centered on mobile, left on md+ -->
-                <div class="grid grid-cols-2 gap-4 pt-6 border-t border-brand-gold/20 justify-items-center md:justify-items-start">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
-                            <i class="fas fa-gem text-sm"></i>
-                        </div>
-                        <span class="font-bold text-xs uppercase tracking-wider">Certified Purity</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
-                            <i class="fas fa-hammer text-sm"></i>
-                        </div>
-                        <span class="font-bold text-xs uppercase tracking-wider">Master Craftsmanship</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
-                            <i class="fas fa-hand-holding-heart text-sm"></i>
-                        </div>
-                        <span class="font-bold text-xs uppercase tracking-wider">Bespoke Services</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
-                            <i class="fas fa-shield-alt text-sm"></i>
-                        </div>
-                        <span class="font-bold text-xs uppercase tracking-wider">Authorised Dealer</span>
-                    </div>
-                </div>
-
-                <!-- CTA — centered on mobile, left on md+ -->
-                <div class="flex justify-center md:justify-start">
-                    <a href="https://wa.me/919540816060" target="_blank" class="btn-outline inline-flex mt-4"><i class="fab fa-whatsapp"></i> Book a Private Consultation</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- ===== WHY CHOOSE US ===== -->
         <section id="why-us" class="py-20 bg-brand-light border-t border-brand-gold/10">
@@ -313,7 +304,7 @@
             </div>
         </section>
 
-        <!-- ===== TESTIMONIALS (SCROLLABLE ON MOBILE) ===== -->
+        <!-- ===== TESTIMONIALS ===== -->
         <section id="testimonials" class="py-24 bg-brand-dark text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10 bg-[url('assets/cta-background.webp')] bg-cover bg-center"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -324,12 +315,8 @@
                     <p class="text-white/50 mt-4">What our patrons say about their experience with us.</p>
                 </div>
 
-                <!-- Swipeable Container -->
                 <div class="testimonials-scroll-wrapper" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonials-scroll-container" id="testimonialsGrid">
-                        <!-- Populated by JS -->
-                    </div>
-                    <!-- Scroll Hint (mobile) -->
+                    <div class="testimonials-scroll-container" id="testimonialsGrid"></div>
                     <div class="scroll-hint md:hidden mt-6 text-center text-white/30 text-sm animate-pulse">
                         <i class="fas fa-chevron-left mr-2"></i> Swipe to explore <i class="fas fa-chevron-right ml-2"></i>
                     </div>
@@ -346,9 +333,7 @@
                     <h2 class="font-heading text-4xl md:text-5xl text-brand-dark">Our <span class="text-brand-gold italic">Trusted</span> Brands</h2>
                     <p class="text-brand-muted max-w-xl mx-auto mt-4">Manish Jewellers is proud to partner with India's most prestigious jewellery houses.</p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" id="brandsGrid" data-aos="fade-up">
-                    <!-- Rendered by JS -->
-                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" id="brandsGrid" data-aos="fade-up"></div>
                 <div class="text-center mt-12">
                     <span class="inline-flex items-center gap-3 text-sm font-bold text-brand-dark bg-brand-light px-8 py-4 rounded-full border border-brand-gold/20 shadow-lg">
                         <i class="fas fa-shield-alt text-brand-gold text-lg"></i> MMTC PAMP — LBMA GOOD DELIVERY REFINER
@@ -383,7 +368,6 @@
                     <p class="text-brand-muted mt-4">Hover to watch — click to visit our Instagram.</p>
                 </div>
 
-                <!-- Ticker -->
                 <div class="ticker-wrap mb-12" data-aos="fade-up">
                     <div class="ticker">
                         <span class="ticker-text">✦ Manish Jewellers — MMTC PAMP Authorised Dealer ✦ Bhavishya Silver Creation — Premium Gold &amp; Silver ✦ Trusted Since 2010 ✦ Shop Now at Faridabad ✦</span>
@@ -467,7 +451,7 @@
 
                     <div class="bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10 shadow-2xl">
                         <h3 class="font-heading text-3xl text-white mb-8 border-b border-white/10 pb-4">Private Inquiry</h3>
-                        <form id="contactForm" class="space-y-6">
+                        <form id="contactForm" class="space-y-6" novalidate>
                             <div>
                                 <label class="block text-xs font-bold text-brand-gold mb-2 uppercase tracking-widest">Name</label>
                                 <input type="text" id="contactName" required class="w-full bg-transparent border-b border-white/20 pb-3 text-white focus:outline-none focus:border-brand-gold transition-colors placeholder:text-white/30" placeholder="Your full name" />
@@ -509,52 +493,51 @@
     <!-- FOOTER -->
     <!-- ════════════════════════════════════════════ -->
     <footer class="pt-16 pb-8 bg-brand-dark text-white/70 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
-            <div class="col-span-2 md:col-span-1 text-center md:text-left">
-                <img src="assets/logo-image.png" alt="Manish Jewellers" class="h-16 md:h-20 w-auto object-contain mx-auto md:mx-auto mb-4" onerror="this.style.display='none';" />
-                <p class="text-sm text-white/50 leading-relaxed max-w-xs mx-auto md:mx-auto">The Wholesale Destination for Premium Gold &amp; Silver. A sub-brand of Manish Jewellers 21D, Faridabad.</p>
-                <div class="flex justify-center md:justify-start gap-3 mt-4">
-                    <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/919540816060" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fas fa-map-pin"></i></a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+                <div class="col-span-2 md:col-span-1 text-center md:text-left">
+                    <img src="assets/logo-image.png" alt="Manish Jewellers" class="h-16 md:h-20 w-auto object-contain mx-auto md:mx-auto mb-4" onerror="this.style.display='none';" />
+                    <p class="text-sm text-white/50 leading-relaxed max-w-xs mx-auto md:mx-auto">The Wholesale Destination for Premium Gold &amp; Silver. A sub-brand of Manish Jewellers 21D, Faridabad.</p>
+                    <div class="flex justify-center md:justify-start gap-3 mt-4">
+                        <a href="https://www.facebook.com/share/194g5XCbcv/?mibextid=wwXIfr" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/manish_jewellers_21d_faridabad" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919540816060" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://maps.app.goo.gl/56ojgLTwswStFKgeA?g_st=iw" target="_blank" class="social-icon bg-white/5 text-white/70 hover:bg-brand-gold hover:text-brand-dark"><i class="fas fa-map-pin"></i></a>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="font-heading text-lg text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-brand-gold transition">Home</a></li>
+                        <li><a href="#products" class="hover:text-brand-gold transition">Boutique</a></li>
+                        <li><a href="#about" class="hover:text-brand-gold transition">Our Legacy</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="font-heading text-lg text-white mb-4">Collections</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#products" class="hover:text-brand-gold transition">Gold Jewelry</a></li>
+                        <li><a href="#products" class="hover:text-brand-gold transition">Silver Jewelry</a></li>
+                        <li><a href="#products" class="hover:text-brand-gold transition">Diamond Jewelry</a></li>
+                        <li><a href="#products" class="hover:text-brand-gold transition">Platinum</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left hidden md:block">
+                    <h4 class="font-heading text-lg text-white mb-4">Subscribe</h4>
+                    <p class="text-sm text-white/50 mb-4">Get 10% off your first order and weekly exclusive updates.</p>
+                    <form id="subscribeForm" class="space-y-3" onsubmit="event.preventDefault(); alert('Subscribed! You\'ll receive updates shortly.');">
+                        <input type="email" placeholder="Your Email Address" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-brand-gold text-white text-sm transition" />
+                        <button type="submit" class="w-full bg-brand-gold hover:bg-brand-gold-hover text-brand-dark py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition">Subscribe</button>
+                    </form>
                 </div>
             </div>
-            <div class="text-center md:text-left">
-                <h4 class="font-heading text-lg text-white mb-4">Quick Links</h4>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="#home" class="hover:text-brand-gold transition">Home</a></li>
-                    <li><a href="#products" class="hover:text-brand-gold transition">Boutique</a></li>
-                    <li><a href="#about" class="hover:text-brand-gold transition">Our Legacy</a></li>
-                    <li><a href="#contact" class="hover:text-brand-gold transition">Contact</a></li>
-                </ul>
-            </div>
-            <div class="text-center md:text-left">
-                <h4 class="font-heading text-lg text-white mb-4">Collections</h4>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="#products" class="hover:text-brand-gold transition">Gold Jewelry</a></li>
-                    <li><a href="#products" class="hover:text-brand-gold transition">Silver Jewelry</a></li>
-                    <li><a href="#products" class="hover:text-brand-gold transition">Diamond Jewelry</a></li>
-                    <li><a href="#products" class="hover:text-brand-gold transition">Platinum</a></li>
-                </ul>
-            </div>
-            <!-- Subscribe section hidden on mobile (md and below) -->
-            <div class="text-center md:text-left hidden md:block">
-                <h4 class="font-heading text-lg text-white mb-4">Subscribe</h4>
-                <p class="text-sm text-white/50 mb-4">Get 10% off your first order and weekly exclusive updates.</p>
-                <form id="subscribeForm" class="space-y-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
-                    <input type="email" placeholder="Your Email Address" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-brand-gold text-white text-sm transition" />
-                    <button type="submit" class="w-full bg-brand-gold hover:bg-brand-gold-hover text-brand-dark py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition">Subscribe</button>
-                </form>
+            <div class="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+                <span>&copy; 2026 Manish Jewellers — Bhavishya Silver Creation. All Rights Reserved.</span>
+                <span>Made with <i class="fas fa-heart text-brand-gold text-xs"></i> by Manish Jewellers</span>
             </div>
         </div>
-        <div class="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-            <span>&copy; 2026 Manish Jewellers — Bhavishya Silver Creation. All Rights Reserved.</span>
-            <span>Made with <i class="fas fa-heart text-brand-gold text-xs"></i> by Manish Jewellers</span>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
     </script>
